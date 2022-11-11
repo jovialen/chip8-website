@@ -8,9 +8,13 @@
       content="width=device-width, initial-scale=1.0"
     />
 
+    <link rel="stylesheet" href="styles/home.css" />
     <link rel="stylesheet" href="styles/common.css" />
     <link rel="stylesheet" href="styles/header.css" />
     <link rel="stylesheet" href="styles/hero.css" />
+    <link rel="stylesheet" href="styles/about.css" />
+    <link rel="stylesheet" href="styles/components.css" />
+    <link rel="stylesheet" href="styles/cards.css" />
 
     <script src="javascript/navbar.js"></script>
 
@@ -104,7 +108,65 @@
           </div>
         </div>
       </section>
-      <section class="about"></section>
+
+      <section class="about">
+        <div class="container">
+          <div class="about-content">
+            <div class="about-text">
+              <h1>Hva er Chip 8?</h1>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing
+                elit. Eum impedit sequi velit assumenda porro culpa
+                molestias aut eaque modi architecto, repudiandae nam
+                nesciunt iusto atque quaerat expedita, alias nisi
+                tempore earum voluptates pariatur. Soluta dolore
+                dolores error laboriosam quia deserunt rem, possimus
+                laudantium repudiandae! Error magni ullam doloremque
+                recusandae nobis.
+              </p>
+            </div>
+            <div class="about-img"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="components">
+        <div class="container">
+          <div class="components-header">
+            <h1>Lær om</h1>
+          </div>
+          <div class="cards centered columns">
+            <div class="component cpu">
+              <a href="./cpu" class="card">
+                <img
+                  src="https://img.icons8.com/sf-regular-filled/96/FF9800/electronics.png"
+                  class="card-img"
+                />
+                Prosessoren
+              </a>
+            </div>
+            <div class="component gpu">
+              <a href="./gpu" class="card">
+                <img
+                  src="https://img.icons8.com/sf-regular-filled/96/EF5350/video-card.png"
+                  class="card-img"
+                />
+                Grafikkortet
+              </a>
+            </div>
+            <div class="component audio">
+              <a href="./audio" class="card">
+                <img
+                  src="https://img.icons8.com/sf-regular-filled/96/7CB342/audio-wave.png"
+                  class="card-img"
+                />
+                Lyden
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="examples"></section>
     </main>
   </body>

@@ -4,10 +4,6 @@ header {
     border-image: linear-gradient(to right, #42A5F5 25%, #FF9800 25%, #FF9800 50%, #EF5350 50%, #EF5350 75%, #7CB342 75%) 2;
 }
 
-header * {
-    transition: ease-in-out 200ms;
-}
-
 .header-left {
     margin-right: auto;
 }
@@ -34,6 +30,7 @@ nav {
 }
 
 .nav-item {
+    transition: ease-in-out 200ms;
     display: flex;
     padding: 1rem;
 }
