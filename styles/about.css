@@ -12,6 +12,22 @@
     font-weight: 200;
 }
 
+.about-text p {
+    line-height: 1.6rem;
+}
+
+.about-link {
+    text-decoration: underline;
+    color: blue;
+}
+
+.about-link:hover {
+    color: lightblue;
+}
+
+.about-link:visited {
+    color: darkblue;
+}
 
 .about-img {
     background-color: gray;
