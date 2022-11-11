@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <link rel="stylesheet" href="styles/common.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/hero.css" />
+
+    <script src="javascript/navbar.js"></script>
+
+    <title>Chip 8</title>
+  </head>
+  <body>
+    <header>
+      <div class="columns container">
+        <div class="header-left">
+          <div class="header-title">
+            <a href="#">
+              <h1>Chip 8</h1>
+            </a>
+          </div>
+        </div>
+        <div id="navbar" class="header-middle">
+          <nav>
+            <a href="#" class="nav-item">
+              <img
+                src="https://img.icons8.com/sf-regular-filled/96/42A5F5/home-page.png"
+                class="nav-img"
+              />
+              Hjem
+            </a>
+            <a href="./cpu" class="nav-item">
+              <img
+                src="https://img.icons8.com/sf-regular-filled/96/FF9800/electronics.png"
+                class="nav-img"
+              />
+              CPU
+            </a>
+            <a href="./gpu" class="nav-item">
+              <img
+                src="https://img.icons8.com/sf-regular-filled/96/EF5350/video-card.png"
+                class="nav-img"
+              />
+              GPU
+            </a>
+            <a href="./audio" class="nav-item">
+              <img
+                src="https://img.icons8.com/sf-regular-filled/96/7CB342/audio-wave.png"
+                class="nav-img"
+              />
+              Lyd
+            </a>
+          </nav>
+          <div
+            class="nav-toggle nav-item"
+            onclick="toggleNavbar()"
+            style="margin-left: auto"
+          >
+            <img
+              src="https://img.icons8.com/ios-glyphs/90/null/menu-rounded.png"
+              class="nav-img"
+            />
+          </div>
+        </div>
+        <div class="header-right">
+          <a
+            href="https://github.com/jovialen/chip8"
+            class="nav-item"
+          >
+            GitHub
+            <img
+              class="nav-img"
+              src="https://img.icons8.com/sf-regular-filled/96/000000/github.png"
+            />
+          </a>
+          <div class="nav-toggle nav-item" onclick="toggleNavbar()">
+            <img
+              src="https://img.icons8.com/ios-glyphs/90/null/menu-rounded.png"
+              class="nav-img"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero-header">
+            <h1>Chip 8</h1>
+            <h2>Verdens minst kompliserte komputer</h2>
+          </div>
+          <div class="centered">
+            <img
+              src="assets/images/example_window.png"
+              alt="Eksempel på et Chip 8 program"
+              class="hero-img"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="about"></section>
+      <section class="examples"></section>
+    </main>
+  </body>
+</html>
