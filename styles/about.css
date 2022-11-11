@@ -15,4 +15,11 @@
 
 .about-img {
     background-color: gray;
+    height: 50px;
+}
+
+@media (max-width: 550px) {
+    .about-content {
+        grid-template-columns: 1fr;
+    }
 }
