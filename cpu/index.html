@@ -126,7 +126,7 @@
               En CPU, også kjent som en prosessor eller "Centeral
               Processing Unit", er en komponent av en datamaskin.
               CPUen er den utførende komponenten i datamaskinen, som
-              er ansvarling for å kjøre programmer på maskinen. Et
+              er ansvarlig for å kjøre programmer på maskinen. Et
               dataprogram er en fil som inneholder instruksjoner for
               CPUen å utføre. Alt som skjer i en datamaskin kan spores
               tilbake til CPUen.
@@ -149,7 +149,7 @@
                 <ul>
                   <li>Kontrollenheten</li>
                   <li>Den interne bussen</li>
-                  <li>Registerene</li>
+                  <li>Registrene</li>
                   <li>Stacken</li>
                   <li>ALUen</li>
                   <li>MMUen</li>
@@ -177,7 +177,7 @@
                   Kontrollenheten er dirigenten av CPUen. Det er den
                   som får de interne komponentene til CPUen å jobbe
                   sammen ved å gi dem instruksjoner. Den opererer på
-                  et ekstert klokkesignal fra klokken i datamaskinen.
+                  et eksternt klokkesignal fra klokken i datamaskinen.
                   Hver gang denne klokken sender et signal, utfører
                   kontrollenheten en handling. I Chip 8 går denne
                   klokken på 60Hz, eller 60 ganger i sekundet.
@@ -197,23 +197,23 @@
         <section id="registers">
           <div class="container">
             <div class="about-header">
-              <h3>Registerene og Stacken</h3>
+              <h3>Registrene og Stacken</h3>
             </div>
             <div class="about-content">
               <div class="about-text">
                 <p>
-                  Registere er komponenter som kan lagre ett tall.
+                  Registre er komponenter som kan lagre ett tall.
                   Forskjellige CPUer har forskjellige oppsett av
-                  registere, noen kun et par registere, andre svært
-                  mange.
+                  registre, noen har kun et par registre, andre har
+                  svært mange.
                 </p>
                 <p>
-                  Chip 8 har 16 1-byte registere (tall fra 0 til 255),
-                  og tre andre registere. De tre er index-registeret,
+                  Chip 8 har 16 1-byte registre (tall fra 0 til 255),
+                  og tre andre registre. De tre er index-registeret,
                   program-registeret og stack-registeret. Både index-
                   og program-registeret har 2 bytes istedenfor 1. Det
                   er fordi både index- og program-registeret brukes
-                  til å peke til data i RAM minnet til chippen, som er
+                  til å peke til data i RAM minnet til chipen, som er
                   4kB, som er for stort til at kun 1 byte kan peke til
                   hele minnet. Det siste registeret brukes i stacken.
                 </p>
@@ -269,9 +269,9 @@
                   ALU står for "Arithmetic logic unit". ALUen er
                   komponenten i en datamaskin som gjør alle
                   matematiske operasjoner. Når kontrollenheten mottar
-                  en instruksjon for å utføre en mattematisk handling,
+                  en instruksjon for å utføre en matematisk handling,
                   instruerer den ALUen om hvilken operasjon som skal
-                  skje, hvilke registere som har tallene å gjøre
+                  skje, hvilke registre som har tallene å gjøre
                   operasjonen på, og hvilket register resultatet skal
                   lagres i.
                 </p>
@@ -291,7 +291,7 @@
                   MMU, også kjent som en "Memory Managment Unit", er
                   delen av CPUen som brukes til å lese av og til
                   minnet til datamaskinen. Når kontrollenheten trenger
-                  data fra minnet, insturerer den MMUen om hvor i
+                  data fra minnet, instruerer den MMUen om hvor i
                   minnet den vil, og om den skal skrive en verdi til
                   den delen av minnet eller lese verdien som allerede
                   er der. MMUen er den eneste delen av CPUen som har
@@ -311,17 +311,17 @@
               <div class="about-text">
                 <p>
                   Noen CPUer har unike komponenter som de fleste andre
-                  CPUer ikke har. I Chip 8 er dette de to timerene.
+                  CPUer ikke har. I Chip 8 er dette de to klokker.
                 </p>
                 <p>
-                  Chippen har 2 timere. Begge timerene teller ned med
+                  Chipen har 2 klokker. Begge klokkene teller ned med
                   en for hver gang klokken sender et signal, altså 60
-                  ganger i sekundet, eller med 60Hz. Den ene timeren
+                  ganger i sekundet, eller med 60Hz. Den ene klokken
                   gjør ingenting bortsett fra å telle ned. Denne
-                  timeren kan både skrives til og leses av, og er
-                  hvordan chippen gjør tidsberegning. Den andre
-                  timeren kalles lydtimeren, og kan bare skrives til.
-                  Så lenge denne timeren ikke er lik 0, så vil chippen
+                  klokken kan både skrives til og leses av, og er
+                  hvordan chipen gjør tidsberegning. Den andre klokken
+                  er lydklokken, og kan bare skrives til. Så lenge
+                  verdien i denne klokken ikke er lik 0, så vil chipen
                   lage en konstant bip-lyd.
                 </p>
               </div>
@@ -372,8 +372,8 @@
                       <pre><code class="language-c">clear_display();</code></pre>
                     </td>
                     <td>
-                      Tømmer skjermen til chippen. Skrur alle
-                      pikselene på skjermen av.
+                      Tømmer skjermen til chipen. Skrur alle pikslene
+                      på skjermen av.
                     </td>
                   </tr>
                   <tr>
@@ -624,7 +624,7 @@
                       <pre><code class="language-c">register[x] = get_timer_1();</code></pre>
                     </td>
                     <td>
-                      Sett register x lik verdien lagret i timer 1.
+                      Sett register x lik verdien lagret i klokke 1.
                     </td>
                   </tr>
                   <tr>
@@ -644,7 +644,7 @@
                     <td>
                       <pre><code class="language-c">set_timer_1(register[x]);</code></pre>
                     </td>
-                    <td>Sett timer 1 til verdien i register x.</td>
+                    <td>Sett klokke 1 til verdien i register x.</td>
                   </tr>
                   <tr>
                     <td>set timer 2</td>
@@ -652,7 +652,10 @@
                     <td>
                       <pre><code class="language-c">set_timer_2(register[x])</code></pre>
                     </td>
-                    <td>Sett timer 2 til verdien i register x.</td>
+                    <td>
+                      Sett klokke 2 (lydklokken) til verdien i
+                      register x.
+                    </td>
                   </tr>
                   <tr>
                     <td>add index</td>
@@ -685,9 +688,9 @@ ram[index + 1] = (register[x] % 100) % 10;
                     </td>
                     <td>
                       Ta verdien til register x som et desimaltall, og
-                      lagre hundre-sifferet i minned ved index
+                      lagre hundre-sifferet i minnet ved index
                       registeret, tier-sifferet ved index + 1 og
-                      entalls-sifferet ved index + 2.
+                      entall-sifferet ved index + 2.
                     </td>
                   </tr>
                   <tr>
@@ -697,7 +700,7 @@ ram[index + 1] = (register[x] % 100) % 10;
                       <pre><code class="language-c">store_registers(x);</code></pre>
                     </td>
                     <td>
-                      Lagre verdien av registerene fra 0 opp til x i
+                      Lagre verdien av registrene fra 0 opp til x i
                       minnet ved index-registeret.
                     </td>
                   </tr>
@@ -708,7 +711,7 @@ ram[index + 1] = (register[x] % 100) % 10;
                       <pre><code class="language-c">load_registers(x);</code></pre>
                     </td>
                     <td>
-                      Sett verdien til registerene fra 0 opp til x fra
+                      Sett verdien til registrene fra 0 opp til x fra
                       minnet ved index-registeret.
                     </td>
                   </tr>
