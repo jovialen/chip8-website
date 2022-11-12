@@ -5,3 +5,4 @@
 - <a target="_blank" href="https://icons8.com/icon/jFD5FvqNIKDl/audio-wave">Audio Wave icon by Icons8</a>
 - <a target="_blank" href="https://icons8.com/icon/0IolQYKA7OLQ/home-page">Home Page icon by Icons8</a>
 - <a target="_blank" href="https://icons8.com/icon/S5biqohaDgd1/menu-rounded">Menu Rounded icon by Icons8</a>
+- <a target="_blank" href="https://icons8.com/icon/4Sjrm3bwm9Lv/smartphone-ram">Smartphone RAM icon by Icons8</a>
