@@ -11,7 +11,9 @@
     <link rel="stylesheet" href="../styles/common.css" />
     <link rel="stylesheet" href="../styles/header.css" />
 
-    <script src="javascript/navbar.js"></script>
+    <link rel="stylesheet" href="styles/components.css" />
+
+    <script src="../javascript/navbar.js"></script>
 
     <title>Chip 8</title>
   </head>
@@ -87,5 +89,34 @@
         </div>
       </div>
     </header>
+    <main>
+      <section class="components">
+        <div class="container">
+          <div class="components-header">
+            <h1>Lær også om</h1>
+          </div>
+          <div class="component-cards centered columns">
+            <div class="component gpu">
+              <a href="../gpu" class="component-card">
+                <img
+                  src="https://img.icons8.com/sf-regular-filled/96/EF5350/video-card.png"
+                  class="component-card-img"
+                />
+                Grafikkortet
+              </a>
+            </div>
+            <div class="component audio">
+              <a href="../audio" class="component-card">
+                <img
+                  src="https://img.icons8.com/sf-regular-filled/96/7CB342/audio-wave.png"
+                  class="component-card-img"
+                />
+                Lyden
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
