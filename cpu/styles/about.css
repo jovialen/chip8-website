@@ -10,18 +10,27 @@
 
 .about-text {
     display: flex;
-    flex-direction: column;
-    flex-grow: 1;
     justify-content: center;
+    flex-direction: column;
+
+    flex-grow: 1;
 }
 
 .about-img-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
     flex-grow: 1;
 }
 
 .about-img {
     height: 15rem;
     width: auto;
+}
+
+.about p {
+    margin: 0.25rem 0;
 }
 
 #control-unit .about-content {
