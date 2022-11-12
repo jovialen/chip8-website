@@ -8,10 +8,23 @@
       content="width=device-width, initial-scale=1.0"
     />
 
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+
     <link rel="stylesheet" href="../styles/common.css" />
     <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/hero.css" />
 
     <link rel="stylesheet" href="styles/components.css" />
+    <link rel="stylesheet" href="styles/sections.css" />
+    <link rel="stylesheet" href="styles/about.css" />
+    <link rel="stylesheet" href="styles/instructions.css" />
 
     <link
       rel="shortcut icon"
@@ -96,6 +109,610 @@
       </div>
     </header>
     <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero-header">
+            <h1>Prosessoren</h1>
+            <p>Hva er den, hvordan fungerer den, og mye mer!</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="about">
+        <section id="what">
+          <div class="container">
+            <h2>Hva er en CPU?</h2>
+            <p>
+              En CPU, også kjent som en prosessor eller "Centeral
+              Processing Unit", er en komponent av en datamaskin.
+              CPUen er den utførende komponenten i datamaskinen, som
+              er ansvarling for å kjøre programmer på maskinen. Et
+              dataprogram er en fil som inneholder instruksjoner for
+              CPUen å utføre. Alt som skjer i en datamaskin kan spores
+              tilbake til CPUen.
+            </p>
+          </div>
+        </section>
+
+        <section id="overview">
+          <div class="container">
+            <div class="about-header">
+              <h2>Komponentene til komponenten</h2>
+            </div>
+            <div class="about-content">
+              <div class="about-text">
+                <p>
+                  En CPU består av flere små komponenter. Disse
+                  komponentene jobber sammen for å sammen utføre
+                  oppgavene til CPUen. Disse komponentene er:
+                </p>
+                <ul>
+                  <li>Kontrolenheten</li>
+                  <li>Den interne bussen</li>
+                  <li>Registerene</li>
+                  <li>Stacken</li>
+                  <li>ALUen</li>
+                  <li>MMUen</li>
+                </ul>
+              </div>
+              <div class="about-img-container">
+                <img
+                  src="assets/images/cpu_internal.png"
+                  alt="Diagram av innsiden til en prosessor"
+                  class="about-img"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="control-unit">
+          <div class="container">
+            <div class="about-header">
+              <h3>Kontrolenheten</h3>
+            </div>
+            <div class="about-content">
+              <div class="about-text">
+                <p>
+                  Kontrolenheten er dirigenten av CPUen. Det er den
+                  som får de interne komponentene til CPUen å jobbe
+                  sammen ved å gi dem instruksjoner. Den opererer på
+                  et ekstert klokkesignal fra klokken i datamaskinen.
+                  Hver gang denne klokken sender et signal, utfører
+                  kontrolenheten en handling. I Chip 8 går denne
+                  klokken på 60Hz, eller 60 ganger i sekundet.
+                </p>
+              </div>
+              <div class="about-img-container">
+                <img
+                  src="assets/images/cpu_cycle.png"
+                  alt="Diagram av en CPU syklus"
+                  class="about-img"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="registers">
+          <div class="container">
+            <div class="about-header">
+              <h3>Registerene og Stacken</h3>
+            </div>
+            <div class="about-content">
+              <div class="about-text">
+                <p>
+                  Registere er komponenter som kan lagre ett tall.
+                  Forskjellige CPUer har forskjellige oppsett av
+                  registere, noen kun et par registere, andre svert
+                  mange.
+                </p>
+                <p>
+                  Chip 8 har 16 1-byte registere (tall fra 0 til 255),
+                  og tre andre registere. De tre er index-registeret,
+                  program-registeret og stack-registeret. Både index-
+                  og program-registeret har 2 bytes istedenfor 1. Det
+                  er fordi både index- og program-registeret brukes
+                  til å peke til data i RAM minnet til chippen, som er
+                  4kB, som er for stort til at kun 1 byte kan peke til
+                  hele minnet. Det siste registeret brukes i stacken.
+                </p>
+                <p>
+                  Index-registeret eksisterer for å tillate CPUen å
+                  fortelle hva i minnet den vil lese av når den spør
+                  RAM minnet om data. Program-registeret er svert
+                  likt. Et program en er liste med instruksjoner som
+                  er lastet inn i RAM minnet, og program-registeret
+                  peker til hvor i minnet den neste instruksjonen er.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="stack">
+          <div class="container">
+            <div class="about-header">
+              <h3>Stacken</h3>
+            </div>
+            <div class="about-content">
+              <div class="about-text">
+                <p>
+                  Stacken er en liste med minne som inneholder verdier
+                  for program-registeret, og stack-registeret peker
+                  til hvor i den listen CPUen er. Stacken eksisterer
+                  sånn at hvis vi vil flytte på program-registeret,
+                  kan vi lagre hvor vi er før vi forandrer verdien av
+                  den. På denne måten kan CPUen gå tilbake nøyaktig
+                  hvor den var.
+                </p>
+              </div>
+              <div class="about-img-container">
+                <img
+                  src="assets/images/cpu_stack.png"
+                  alt="Diagram av CPU stacken"
+                  class="about-img"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="alu">
+          <div class="container">
+            <div class="about-header">
+              <h3>ALU</h3>
+            </div>
+            <div class="about-content">
+              <div class="about-text">
+                <p>
+                  ALU står for "Arithmetic logic unit". ALUen er
+                  komponenten i en datamaskin som gjør alle
+                  matematiske operasjoner. Når kontrolenheten mottar
+                  en instruksjon for å utføre en mattematisk handling,
+                  instruerer den ALUen om hvilken operasjon som skal
+                  skje, hvilke registere som har tallene å gjøre
+                  operasjonen på, og hvilket register resultatet skal
+                  lagres i.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="mmu">
+          <div class="container">
+            <div class="about-header">
+              <h3>MMU</h3>
+            </div>
+            <div class="about-content">
+              <div class="about-text">
+                <p>
+                  MMU, også kjent som en "Memory Managment Unit", er
+                  delen av CPUen som brukes til å lese av og til
+                  minnet til datamaskinen. Når kontrolenheten trenger
+                  data fra minnet, insturerer den MMUen om hvor i
+                  minnet den vil, og om den skal skrive en verdi til
+                  den delen av minnet eller lese verdien som allerede
+                  er der. MMUen er den eneste delen av CPUen som har
+                  tilgang til minnet utenfor CPUen.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="timers">
+          <div class="container">
+            <div class="about-header">
+              <h3>Unike komponenter</h3>
+            </div>
+            <div class="about-content">
+              <div class="about-text">
+                <p>
+                  Noen CPUer har unike komponenter som de fleste andre
+                  CPUer ikke har. I Chip 8 er dette de to timerene.
+                </p>
+                <p>
+                  Chippen har 2 timere. Begge timerene teller ned med
+                  en for hver gang klokken sender et signal, altså 60
+                  ganger i sekundet, eller med 60Hz.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section id="instructions">
+        <div class="container">
+          <div class="instructions-header">
+            <h2>Instruksjoner</h2>
+          </div>
+          <div class="instructions-content">
+            <div class="instructions-text">
+              <p>
+                Alle CPUer har en liste med instruksjoner som de
+                forstår. Chip 8 har 36 instruksjoner, som kanskje
+                høres mye ut, men er relativt lite sammenlignet med
+                andre CPUer. Som sagt, er Chip 8 kanskje verdens minst
+                kompliserte datamaskin.
+              </p>
+              <p>
+                Hver instruksjon har et tall knyttet til seg. CPUen
+                tolker disse tallene som en instruksjon som da
+                utføres. Det er typisk å skrive disse instruksjonene i
+                base-16.
+              </p>
+            </div>
+            <div class="instructions-table">
+              <div class="instructions-subheader">
+                <h3>Chip 8 Instruksjoner</h3>
+              </div>
+              <table id="instruction-set">
+                <thead>
+                  <tr>
+                    <th>Instruksjon</th>
+                    <th>Base 16</th>
+                    <th>Pseudo-kode</th>
+                    <th>Forklaring</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>clear</td>
+                    <td>00E0</td>
+                    <td>
+                      <pre><code class="language-c">clear_display();</code></pre>
+                    </td>
+                    <td>
+                      Tømmer skjermen til chippen. Skrur alle
+                      pikselene på skjermen av.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>return</td>
+                    <td>00EE</td>
+                    <td>
+                      <pre><code class="language-c">return;</code></pre>
+                    </td>
+                    <td>
+                      Gå tilbake til den forrige posisjonen på
+                      stacken. Sett program-registeret til forrige
+                      verdi.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>goto</td>
+                    <td>1nnn</td>
+                    <td>
+                      <pre><code class="language-c">goto nnn;</code></pre>
+                    </td>
+                    <td>Sett program-registeret til verdien nnn.</td>
+                  </tr>
+                  <tr>
+                    <td>call</td>
+                    <td>2nnn</td>
+                    <td>
+                      <pre><code class="language-c">*(nnn)();</code></pre>
+                    </td>
+                    <td>
+                      Lagre program-registeret i stacken og sett den
+                      til verdien nnn.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>if eq</td>
+                    <td>3xnn</td>
+                    <td>
+                      <pre><code class="language-c">if (register[x] == nn)</code></pre>
+                    </td>
+                    <td>
+                      Hopp over den neste instruksjonen hvis verdien i
+                      register x er lik nn
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>if not eq</td>
+                    <td>4xnn</td>
+                    <td>
+                      <pre><code class="language-c">if (register[x] != nn)</code></pre>
+                    </td>
+                    <td>
+                      Hopp over den neste instruksjon hvis verdien i
+                      register x ikke er lik nn.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>if eq</td>
+                    <td>5xy0</td>
+                    <td>
+                      <pre><code class="language-c">if (register[x] == register[y])</code></pre>
+                    </td>
+                    <td>
+                      Hopp over den neste instruksjonen hvis verdien i
+                      register x er lik verdien i register y.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>set</td>
+                    <td>6xnn</td>
+                    <td>
+                      <pre><code class="language-c">register[x] = nn;</code></pre>
+                    </td>
+                    <td>Sett register x lik nn.</td>
+                  </tr>
+                  <tr>
+                    <td>add</td>
+                    <td>7xnn</td>
+                    <td>
+                      <pre><code class="language-c">register[x] += nn;</code></pre>
+                    </td>
+                    <td>Legg til nn i register x.</td>
+                  </tr>
+                  <tr>
+                    <td>assign</td>
+                    <td>8xy0</td>
+                    <td>
+                      <pre><code class="language-c">register[x] = register[y];</code></pre>
+                    </td>
+                    <td>Sett register x lik register y.</td>
+                  </tr>
+                  <tr>
+                    <td>bitwise-or</td>
+                    <td>8xy1</td>
+                    <td>
+                      <pre><code class="language-c">register[x] |= register[y];</code></pre>
+                    </td>
+                    <td>
+                      OR verdien til register y inn i register x.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>bitwise-and</td>
+                    <td>8xy2</td>
+                    <td>
+                      <pre><code class="language-c">register[x] &= register[y];</code></pre>
+                    </td>
+                    <td>
+                      AND verdien til register y inn i register x.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>bitwise-xor</td>
+                    <td>8xy3</td>
+                    <td>
+                      <pre><code class="language-c">register[x] ^= register[y];</code></pre>
+                    </td>
+                    <td>
+                      XOR verdien til register y inn i register x.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>add</td>
+                    <td>8xy4</td>
+                    <td>
+                      <pre><code class="language-c">register[x] += register[y];</code></pre>
+                    </td>
+                    <td>Legg til register y i register x.</td>
+                  </tr>
+                  <tr>
+                    <td>sub</td>
+                    <td>8xy5</td>
+                    <td>
+                      <pre><code class="language-c">register[x] -= register[y];</code></pre>
+                    </td>
+                    <td>Trekk register y fra register x.</td>
+                  </tr>
+                  <tr>
+                    <td>shift right</td>
+                    <td>8xy6</td>
+                    <td>
+                      <pre><code class="language-c">register[x] &gt;&gt;= 1;</code></pre>
+                    </td>
+                    <td>
+                      Flytt alle bits-ene i register x en gang til
+                      høyre.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>rev sub</td>
+                    <td>8xy7</td>
+                    <td>
+                      <pre><code class="language-c">register[x] = register[y] - register[x];</code></pre>
+                    </td>
+                    <td>
+                      Trekk register x fra register y, og lagre
+                      resultatet i register x.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>shift left</td>
+                    <td>8xy8</td>
+                    <td>
+                      <pre><code class="language-c">register[x] &lt;&lt;= 1;</code></pre>
+                    </td>
+                    <td>
+                      Flytt alle bits-ene i register x en gang til
+                      venstre.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>if not eq</td>
+                    <td>9xy0</td>
+                    <td>
+                      <pre><code class="language-c">if (register[x] != register[y])</code></pre>
+                    </td>
+                    <td>
+                      Hopp over den neste instruksjonen hvis verdien i
+                      register x ikke er lik verdien i register[y].
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>set index</td>
+                    <td>Annn</td>
+                    <td>
+                      <pre><code class="language-c">index = nnn;</code></pre>
+                    </td>
+                    <td>Sett index-registeret til nnn.</td>
+                  </tr>
+                  <tr>
+                    <td>call</td>
+                    <td>Bnnn</td>
+                    <td>
+                      <pre><code class="language-c">goto (register[0] + nnn);</code></pre>
+                    </td>
+                    <td>
+                      Sett program-registeret til verdien i register 0
+                      pluss nnn.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>rand</td>
+                    <td>Cxnn</td>
+                    <td>
+                      <pre><code class="language-c">register[x] = rand() & nn;</code></pre>
+                    </td>
+                    <td>
+                      Sett register x til en tilfeldig verdi AND nn.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>draw</td>
+                    <td>Dxyn</td>
+                    <td>
+                      <pre><code class="language-c">draw(register[x], register[y], n);</code></pre>
+                    </td>
+                    <td>
+                      Tegn dataen ved index-registeret på skjermen ved
+                      koordinatene til register x og register y, som
+                      er 8 piksler bredt og n piksler høyt.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>key down</td>
+                    <td>Ex9E</td>
+                    <td>
+                      <pre><code class="language-c">if (key[x])</code></pre>
+                    </td>
+                    <td>
+                      Hopp over neste instruksjon hvis knappen x er
+                      trykket.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>key up</td>
+                    <td>ExA1</td>
+                    <td>
+                      <pre><code class="language-c">if (!key[x])</code></pre>
+                    </td>
+                    <td>
+                      Hopp over neste instruksjon hvis knappen x ikke
+                      er trykket.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>get timer 1</td>
+                    <td>Fx07</td>
+                    <td>
+                      <pre><code class="language-c">register[x] = get_timer_1();</code></pre>
+                    </td>
+                    <td>
+                      Sett register x lik verdien lagret i timer 1.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>get key</td>
+                    <td>Fx0A</td>
+                    <td>
+                      <pre><code class="language-c">register[x] = get_key();</code></pre>
+                    </td>
+                    <td>
+                      Sett register x lik til den neste knappen som er
+                      trykket.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>set timer 1</td>
+                    <td>Fx15</td>
+                    <td>
+                      <pre><code class="language-c">set_timer_1(register[x]);</code></pre>
+                    </td>
+                    <td>Sett timer 1 til verdien i register x.</td>
+                  </tr>
+                  <tr>
+                    <td>set timer 2</td>
+                    <td>Fx18</td>
+                    <td>
+                      <pre><code class="language-c">set_timer_2(register[x])</code></pre>
+                    </td>
+                    <td>Sett timer 2 til verdien i register x.</td>
+                  </tr>
+                  <tr>
+                    <td>add index</td>
+                    <td>Fx1E</td>
+                    <td>
+                      <pre><code class="language-c">index += register[x];</code></pre>
+                    </td>
+                    <td>Legg til register x i index registeret.</td>
+                  </tr>
+                  <tr>
+                    <td>font</td>
+                    <td>Fx29</td>
+                    <td>
+                      <pre><code class="language-c">index = font_index[x];</code></pre>
+                    </td>
+                    <td>
+                      Sett index registeret til posisjonen til dataen
+                      for å tegne bokstaven x. (Kun bokstavene i HEX)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>BCD</td>
+                    <td>Fx33</td>
+                    <td>
+                      <pre><code class="language-c">
+ram[index] = register[x] / 100;
+ram[index + 1] = (register[x] / 10) % 10;
+ram[index + 1] = (register[x] % 100) % 10;
+                    </code></pre>
+                    </td>
+                    <td>
+                      Ta verdien til register x som et desimaltall, og
+                      lagre hundre-sifferet i minned ved index
+                      registeret, tier-sifferet ved index + 1 og
+                      entalls-sifferet ved index + 2.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>store</td>
+                    <td>Fx55</td>
+                    <td>
+                      <pre><code class="language-c">store_registers(x);</code></pre>
+                    </td>
+                    <td>
+                      Lagre verdien av registerene fra 0 opp til x i
+                      minnet ved index-registeret.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>load</td>
+                    <td>Fx65</td>
+                    <td>
+                      <pre><code class="language-c">load_registers(x);</code></pre>
+                    </td>
+                    <td>
+                      Sett verdien til registerene fra 0 opp til x fra
+                      minnet ved index-registeret.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="components">
         <div class="container">
           <div class="components-header">
