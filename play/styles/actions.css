@@ -30,12 +30,10 @@
   transition: 200ms;
 }
 
-.actions-left .action {
-  margin-right: 0.5em;
-}
-
-.actions-right .action {
-  margin-left: 0.5em;
+.actions,
+.actions-left,
+.actions-right {
+  gap: 0.25em;
 }
 
 .action-img {
@@ -64,4 +62,15 @@
 
 #github:hover {
   background-color: #d0d0d0;
+}
+
+@media (max-width: 570px) {
+  .actions,
+  .actions-left,
+  .actions-right {
+    margin: 0;
+    gap: 0.25em;
+    flex-direction: column;
+    align-items: baseline;
+  }
 }
