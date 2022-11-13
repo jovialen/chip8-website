@@ -3,10 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="../styles/common.css" />
     <link rel="stylesheet" href="../styles/header.css" />
@@ -82,6 +79,7 @@
         <div class="header-right">
           <a
             href="https://github.com/jovialen/chip8"
+            target="_blank"
             class="nav-item"
           >
             GitHub
@@ -117,13 +115,12 @@
             <div class="about-content">
               <div class="about-text">
                 <p>
-                  RAM står for "Random Access Memory", og kan
-                  sammenlignes med en persons kortidsminne. RAM er
-                  laget for å kunne leses av og skrives til så fort
-                  som overhodet mulig, på bekostning av at dataen i
-                  RAMen forsvinner når datamaskinen slås av. RAM er
-                  sjeldent den eneste formen for minne i en
-                  datamaskin, men den er den viktigste.
+                  RAM står for "Random Access Memory", og kan sammenlignes med
+                  en persons kortidsminne. RAM er laget for å kunne leses av og
+                  skrives til så fort som overhodet mulig, på bekostning av at
+                  dataen i RAMen forsvinner når datamaskinen slås av. RAM er
+                  sjeldent den eneste formen for minne i en datamaskin, men den
+                  er den viktigste.
                 </p>
               </div>
             </div>
@@ -138,20 +135,18 @@
             <div class="about-content">
               <div class="about-text">
                 <p>
-                  Utenom RAM minne finnes det også ROM minne og
-                  fastminne. ROM minne, eller "Read-Only Memory", er
-                  som navnet foreslår minne som kun kan leses fra, som
-                  CD-er eller gamle spillkassetter. ROM bruktes til å
-                  lagre data som aldri kom til å forandre seg, som
-                  spill man kjøpte til konsoller eller andre
-                  dataprogrammer. Fastminne er minnet som du bruker
-                  oftest, ettersom at det kan både leses fra og
-                  skrives til, samt lagres selv etter at maskinen har
-                  blitt skrudd av. Når du går gjennom filsystemet
-                  ditt, er det fastminnet du ser. Dessverre er
-                  fastminne svert tregt å bruke, som betyr at det ikke
-                  er realistisk å bruke fastminne til å lagre data som
-                  variabler og annen midlertidig data.
+                  Utenom RAM minne finnes det også ROM minne og fastminne. ROM
+                  minne, eller "Read-Only Memory", er som navnet foreslår minne
+                  som kun kan leses fra, som CD-er eller gamle spillkassetter.
+                  ROM bruktes til å lagre data som aldri kom til å forandre seg,
+                  som spill man kjøpte til konsoller eller andre dataprogrammer.
+                  Fastminne er minnet som du bruker oftest, ettersom at det kan
+                  både leses fra og skrives til, samt lagres selv etter at
+                  maskinen har blitt skrudd av. Når du går gjennom filsystemet
+                  ditt, er det fastminnet du ser. Dessverre er fastminne svert
+                  tregt å bruke, som betyr at det ikke er realistisk å bruke
+                  fastminne til å lagre data som variabler og annen midlertidig
+                  data.
                 </p>
               </div>
               <div class="about-img-container">
@@ -165,12 +160,11 @@
             <div class="about-content">
               <div class="about-text">
                 <p>
-                  For dette har vi RAM minne. RAM er ekstremt raskt å
-                  både lese av og skrive til, som gjør det til den
-                  beste måten å lagre data CPUen trenger kjapp tilgang
-                  til. Når CPUen trenger noe fra fastminne eller ROM
-                  minne, kan den bare kopiere dataen over til RAM, og
-                  derfra bruke dataen fritt.
+                  For dette har vi RAM minne. RAM er ekstremt raskt å både lese
+                  av og skrive til, som gjør det til den beste måten å lagre
+                  data CPUen trenger kjapp tilgang til. Når CPUen trenger noe
+                  fra fastminne eller ROM minne, kan den bare kopiere dataen
+                  over til RAM, og derfra bruke dataen fritt.
                 </p>
               </div>
             </div>
@@ -185,16 +179,14 @@
             <div class="about-content">
               <div class="about-text">
                 <p>
-                  Grunnen til at RAM er så raskt er på grunn av
-                  hvordan det er satt opp. Inni en RAM-brikke er det
-                  et rutenett av bytes. Når CPUen vil lese eller
-                  skrive til RAM minnet, sier den hvilken rad og
-                  hvilken kolonne den vil bruke, og kan da enten
-                  skrive data til byten på den posisjonen, eller lese
-                  av verdien byten allerede hadde. Så lenge det går
-                  strøm gjennom RAM-brikken, vil bytene forbli det
-                  samme. Når strømmen slås av, så går alle bytene i
-                  brikken tapt.
+                  Grunnen til at RAM er så raskt er på grunn av hvordan det er
+                  satt opp. Inni en RAM-brikke er det et rutenett av bytes. Når
+                  CPUen vil lese eller skrive til RAM minnet, sier den hvilken
+                  rad og hvilken kolonne den vil bruke, og kan da enten skrive
+                  data til byten på den posisjonen, eller lese av verdien byten
+                  allerede hadde. Så lenge det går strøm gjennom RAM-brikken,
+                  vil bytene forbli det samme. Når strømmen slås av, så går alle
+                  bytene i brikken tapt.
                 </p>
               </div>
               <div class="about-img-container">
@@ -216,17 +208,15 @@
             <div class="about-content">
               <div class="about-text">
                 <p>
-                  For å holde orden på dataen lagret i en RAM brikke,
-                  brukes det ofte faste systemer på hvilken data er
-                  lagret hvor. I moderne datamaskiner innebærer det
-                  avsatte områder for fastdata, program-data,
-                  variabler, osv. Heldigvis er Chip 8 en svert enkel
-                  datamaskin. Chip 8 har 4kB med RAM minne. De første
-                  512 bytene er avsatt for bruk av selve datamaskinen,
-                  mens bytene fra 512 til 4096 er til fritt bruk av
-                  programmet som kjører. Programmet lastes også inn
-                  fra en ROM inn i RAM fra posisjon 512 og fremover.
-                  Chip 8 har ikke noe fastminne.
+                  For å holde orden på dataen lagret i en RAM brikke, brukes det
+                  ofte faste systemer på hvilken data er lagret hvor. I moderne
+                  datamaskiner innebærer det avsatte områder for fastdata,
+                  program-data, variabler, osv. Heldigvis er Chip 8 en svert
+                  enkel datamaskin. Chip 8 har 4kB med RAM minne. De første 512
+                  bytene er avsatt for bruk av selve datamaskinen, mens bytene
+                  fra 512 til 4096 er til fritt bruk av programmet som kjører.
+                  Programmet lastes også inn fra en ROM inn i RAM fra posisjon
+                  512 og fremover. Chip 8 har ikke noe fastminne.
                 </p>
               </div>
               <div class="about-img-container">

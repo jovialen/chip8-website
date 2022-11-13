@@ -3,10 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link
       rel="stylesheet"
@@ -91,6 +88,7 @@
         <div class="header-right">
           <a
             href="https://github.com/jovialen/chip8"
+            target="_blank"
             class="nav-item"
           >
             GitHub
@@ -123,13 +121,12 @@
           <div class="container">
             <h2>Hva er en CPU?</h2>
             <p>
-              En CPU, også kjent som en prosessor eller "Centeral
-              Processing Unit", er en komponent av en datamaskin.
-              CPUen er den utførende komponenten i datamaskinen, som
-              er ansvarlig for å kjøre programmer på maskinen. Et
-              dataprogram er en fil som inneholder instruksjoner for
-              CPUen å utføre. Alt som skjer i en datamaskin kan spores
-              tilbake til CPUen.
+              En CPU, også kjent som en prosessor eller "Centeral Processing
+              Unit", er en komponent av en datamaskin. CPUen er den utførende
+              komponenten i datamaskinen, som er ansvarlig for å kjøre
+              programmer på maskinen. Et dataprogram er en fil som inneholder
+              instruksjoner for CPUen å utføre. Alt som skjer i en datamaskin
+              kan spores tilbake til CPUen.
             </p>
           </div>
         </section>
@@ -142,9 +139,9 @@
             <div class="about-content">
               <div class="about-text">
                 <p>
-                  En CPU består av flere små komponenter. Disse
-                  komponentene jobber sammen for å sammen utføre
-                  oppgavene til CPUen. Disse komponentene er:
+                  En CPU består av flere små komponenter. Disse komponentene
+                  jobber sammen for å sammen utføre oppgavene til CPUen. Disse
+                  komponentene er:
                 </p>
                 <ul>
                   <li>Kontrollenheten</li>
@@ -174,13 +171,12 @@
             <div class="about-content">
               <div class="about-text">
                 <p>
-                  Kontrollenheten er dirigenten av CPUen. Det er den
-                  som får de interne komponentene til CPUen å jobbe
-                  sammen ved å gi dem instruksjoner. Den opererer på
-                  et eksternt klokkesignal fra klokken i datamaskinen.
-                  Hver gang denne klokken sender et signal, utfører
-                  kontrollenheten en handling. I Chip 8 går denne
-                  klokken på 60Hz, eller 60 ganger i sekundet.
+                  Kontrollenheten er dirigenten av CPUen. Det er den som får de
+                  interne komponentene til CPUen å jobbe sammen ved å gi dem
+                  instruksjoner. Den opererer på et eksternt klokkesignal fra
+                  klokken i datamaskinen. Hver gang denne klokken sender et
+                  signal, utfører kontrollenheten en handling. I Chip 8 går
+                  denne klokken på 60Hz, eller 60 ganger i sekundet.
                 </p>
               </div>
               <div class="about-img-container">
@@ -202,28 +198,26 @@
             <div class="about-content">
               <div class="about-text">
                 <p>
-                  Registre er komponenter som kan lagre ett tall.
-                  Forskjellige CPUer har forskjellige oppsett av
-                  registre, noen har kun et par registre, andre har
-                  svært mange.
+                  Registre er komponenter som kan lagre ett tall. Forskjellige
+                  CPUer har forskjellige oppsett av registre, noen har kun et
+                  par registre, andre har svært mange.
                 </p>
                 <p>
-                  Chip 8 har 16 1-byte registre (tall fra 0 til 255),
-                  og tre andre registre. De tre er index-registeret,
-                  program-registeret og stack-registeret. Både index-
-                  og program-registeret har 2 bytes istedenfor 1. Det
-                  er fordi både index- og program-registeret brukes
-                  til å peke til data i RAM minnet til chipen, som er
-                  4kB, som er for stort til at kun 1 byte kan peke til
-                  hele minnet. Det siste registeret brukes i stacken.
+                  Chip 8 har 16 1-byte registre (tall fra 0 til 255), og tre
+                  andre registre. De tre er index-registeret, program-registeret
+                  og stack-registeret. Både index- og program-registeret har 2
+                  bytes istedenfor 1. Det er fordi både index- og
+                  program-registeret brukes til å peke til data i RAM minnet til
+                  chipen, som er 4kB, som er for stort til at kun 1 byte kan
+                  peke til hele minnet. Det siste registeret brukes i stacken.
                 </p>
                 <p>
-                  Index-registeret eksisterer for å tillate CPUen å
-                  fortelle hva i minnet den vil lese av når den spør
-                  RAM minnet om data. Program-registeret er svært
-                  likt. Et program en er liste med instruksjoner som
-                  er lastet inn i RAM minnet, og program-registeret
-                  peker til hvor i minnet den neste instruksjonen er.
+                  Index-registeret eksisterer for å tillate CPUen å fortelle hva
+                  i minnet den vil lese av når den spør RAM minnet om data.
+                  Program-registeret er svært likt. Et program en er liste med
+                  instruksjoner som er lastet inn i RAM minnet, og
+                  program-registeret peker til hvor i minnet den neste
+                  instruksjonen er.
                 </p>
               </div>
             </div>
@@ -238,13 +232,12 @@
             <div class="about-content">
               <div class="about-text">
                 <p>
-                  Stacken er en liste med minne som inneholder verdier
-                  for program-registeret, og stack-registeret peker
-                  til hvor i den listen CPUen er. Stacken eksisterer
-                  sånn at hvis vi vil flytte på program-registeret,
-                  kan vi lagre hvor vi er før vi forandrer verdien av
-                  den. På denne måten kan CPUen gå tilbake nøyaktig
-                  hvor den var.
+                  Stacken er en liste med minne som inneholder verdier for
+                  program-registeret, og stack-registeret peker til hvor i den
+                  listen CPUen er. Stacken eksisterer sånn at hvis vi vil flytte
+                  på program-registeret, kan vi lagre hvor vi er før vi
+                  forandrer verdien av den. På denne måten kan CPUen gå tilbake
+                  nøyaktig hvor den var.
                 </p>
               </div>
               <div class="about-img-container">
@@ -266,14 +259,12 @@
             <div class="about-content">
               <div class="about-text">
                 <p>
-                  ALU står for "Arithmetic logic unit". ALUen er
-                  komponenten i en datamaskin som gjør alle
-                  matematiske operasjoner. Når kontrollenheten mottar
-                  en instruksjon for å utføre en matematisk handling,
-                  instruerer den ALUen om hvilken operasjon som skal
-                  skje, hvilke registre som har tallene å gjøre
-                  operasjonen på, og hvilket register resultatet skal
-                  lagres i.
+                  ALU står for "Arithmetic logic unit". ALUen er komponenten i
+                  en datamaskin som gjør alle matematiske operasjoner. Når
+                  kontrollenheten mottar en instruksjon for å utføre en
+                  matematisk handling, instruerer den ALUen om hvilken operasjon
+                  som skal skje, hvilke registre som har tallene å gjøre
+                  operasjonen på, og hvilket register resultatet skal lagres i.
                 </p>
               </div>
             </div>
@@ -288,14 +279,13 @@
             <div class="about-content">
               <div class="about-text">
                 <p>
-                  MMU, også kjent som en "Memory Managment Unit", er
-                  delen av CPUen som brukes til å lese av og til
-                  minnet til datamaskinen. Når kontrollenheten trenger
-                  data fra minnet, instruerer den MMUen om hvor i
-                  minnet den vil, og om den skal skrive en verdi til
-                  den delen av minnet eller lese verdien som allerede
-                  er der. MMUen er den eneste delen av CPUen som har
-                  tilgang til minnet utenfor CPUen.
+                  MMU, også kjent som en "Memory Managment Unit", er delen av
+                  CPUen som brukes til å lese av og til minnet til datamaskinen.
+                  Når kontrollenheten trenger data fra minnet, instruerer den
+                  MMUen om hvor i minnet den vil, og om den skal skrive en verdi
+                  til den delen av minnet eller lese verdien som allerede er
+                  der. MMUen er den eneste delen av CPUen som har tilgang til
+                  minnet utenfor CPUen.
                 </p>
               </div>
             </div>
@@ -310,19 +300,18 @@
             <div class="about-content">
               <div class="about-text">
                 <p>
-                  Noen CPUer har unike komponenter som de fleste andre
-                  CPUer ikke har. I Chip 8 er dette de to klokker.
+                  Noen CPUer har unike komponenter som de fleste andre CPUer
+                  ikke har. I Chip 8 er dette de to klokker.
                 </p>
                 <p>
-                  Chipen har 2 klokker. Begge klokkene teller ned med
-                  en for hver gang klokken sender et signal, altså 60
-                  ganger i sekundet, eller med 60Hz. Den ene klokken
-                  gjør ingenting bortsett fra å telle ned. Denne
-                  klokken kan både skrives til og leses av, og er
-                  hvordan chipen gjør tidsberegning. Den andre klokken
-                  er lydklokken, og kan bare skrives til. Så lenge
-                  verdien i denne klokken ikke er lik 0, så vil chipen
-                  lage en konstant bip-lyd.
+                  Chipen har 2 klokker. Begge klokkene teller ned med en for
+                  hver gang klokken sender et signal, altså 60 ganger i
+                  sekundet, eller med 60Hz. Den ene klokken gjør ingenting
+                  bortsett fra å telle ned. Denne klokken kan både skrives til
+                  og leses av, og er hvordan chipen gjør tidsberegning. Den
+                  andre klokken er lydklokken, og kan bare skrives til. Så lenge
+                  verdien i denne klokken ikke er lik 0, så vil chipen lage en
+                  konstant bip-lyd.
                 </p>
               </div>
             </div>
@@ -338,17 +327,15 @@
           <div class="instructions-content">
             <div class="instructions-text">
               <p>
-                Alle CPUer har en liste med instruksjoner som de
-                forstår. Chip 8 har 36 instruksjoner, som kanskje
-                høres mye ut, men er relativt lite sammenlignet med
-                andre CPUer. Som sagt, er Chip 8 kanskje verdens minst
-                kompliserte datamaskin.
+                Alle CPUer har en liste med instruksjoner som de forstår. Chip 8
+                har 36 instruksjoner, som kanskje høres mye ut, men er relativt
+                lite sammenlignet med andre CPUer. Som sagt, er Chip 8 kanskje
+                verdens minst kompliserte datamaskin.
               </p>
               <p>
-                Hver instruksjon har et tall knyttet til seg. CPUen
-                tolker disse tallene som en instruksjon som da
-                utføres. Det er typisk å skrive disse instruksjonene i
-                base-16.
+                Hver instruksjon har et tall knyttet til seg. CPUen tolker disse
+                tallene som en instruksjon som da utføres. Det er typisk å
+                skrive disse instruksjonene i base-16.
               </p>
             </div>
             <div class="instructions-table">
@@ -372,8 +359,8 @@
                       <pre><code class="language-c">clear_display();</code></pre>
                     </td>
                     <td>
-                      Tømmer skjermen til chipen. Skrur alle pikslene
-                      på skjermen av.
+                      Tømmer skjermen til chipen. Skrur alle pikslene på
+                      skjermen av.
                     </td>
                   </tr>
                   <tr>
@@ -383,9 +370,8 @@
                       <pre><code class="language-c">return;</code></pre>
                     </td>
                     <td>
-                      Gå tilbake til den forrige posisjonen på
-                      stacken. Sett program-registeret til forrige
-                      verdi.
+                      Gå tilbake til den forrige posisjonen på stacken. Sett
+                      program-registeret til forrige verdi.
                     </td>
                   </tr>
                   <tr>
@@ -403,8 +389,8 @@
                       <pre><code class="language-c">*(nnn)();</code></pre>
                     </td>
                     <td>
-                      Lagre program-registeret i stacken og sett den
-                      til verdien nnn.
+                      Lagre program-registeret i stacken og sett den til verdien
+                      nnn.
                     </td>
                   </tr>
                   <tr>
@@ -414,8 +400,8 @@
                       <pre><code class="language-c">if (register[x] == nn)</code></pre>
                     </td>
                     <td>
-                      Hopp over den neste instruksjonen hvis verdien i
-                      register x er lik nn
+                      Hopp over den neste instruksjonen hvis verdien i register
+                      x er lik nn
                     </td>
                   </tr>
                   <tr>
@@ -425,8 +411,8 @@
                       <pre><code class="language-c">if (register[x] != nn)</code></pre>
                     </td>
                     <td>
-                      Hopp over den neste instruksjon hvis verdien i
-                      register x ikke er lik nn.
+                      Hopp over den neste instruksjon hvis verdien i register x
+                      ikke er lik nn.
                     </td>
                   </tr>
                   <tr>
@@ -436,8 +422,8 @@
                       <pre><code class="language-c">if (register[x] == register[y])</code></pre>
                     </td>
                     <td>
-                      Hopp over den neste instruksjonen hvis verdien i
-                      register x er lik verdien i register y.
+                      Hopp over den neste instruksjonen hvis verdien i register
+                      x er lik verdien i register y.
                     </td>
                   </tr>
                   <tr>
@@ -470,9 +456,7 @@
                     <td>
                       <pre><code class="language-c">register[x] |= register[y];</code></pre>
                     </td>
-                    <td>
-                      OR verdien til register y inn i register x.
-                    </td>
+                    <td>OR verdien til register y inn i register x.</td>
                   </tr>
                   <tr>
                     <td>bitwise-and</td>
@@ -480,9 +464,7 @@
                     <td>
                       <pre><code class="language-c">register[x] &= register[y];</code></pre>
                     </td>
-                    <td>
-                      AND verdien til register y inn i register x.
-                    </td>
+                    <td>AND verdien til register y inn i register x.</td>
                   </tr>
                   <tr>
                     <td>bitwise-xor</td>
@@ -490,9 +472,7 @@
                     <td>
                       <pre><code class="language-c">register[x] ^= register[y];</code></pre>
                     </td>
-                    <td>
-                      XOR verdien til register y inn i register x.
-                    </td>
+                    <td>XOR verdien til register y inn i register x.</td>
                   </tr>
                   <tr>
                     <td>add</td>
@@ -516,10 +496,7 @@
                     <td>
                       <pre><code class="language-c">register[x] &gt;&gt;= 1;</code></pre>
                     </td>
-                    <td>
-                      Flytt alle bits-ene i register x en gang til
-                      høyre.
-                    </td>
+                    <td>Flytt alle bits-ene i register x en gang til høyre.</td>
                   </tr>
                   <tr>
                     <td>rev sub</td>
@@ -528,8 +505,8 @@
                       <pre><code class="language-c">register[x] = register[y] - register[x];</code></pre>
                     </td>
                     <td>
-                      Trekk register x fra register y, og lagre
-                      resultatet i register x.
+                      Trekk register x fra register y, og lagre resultatet i
+                      register x.
                     </td>
                   </tr>
                   <tr>
@@ -539,8 +516,7 @@
                       <pre><code class="language-c">register[x] &lt;&lt;= 1;</code></pre>
                     </td>
                     <td>
-                      Flytt alle bits-ene i register x en gang til
-                      venstre.
+                      Flytt alle bits-ene i register x en gang til venstre.
                     </td>
                   </tr>
                   <tr>
@@ -550,8 +526,8 @@
                       <pre><code class="language-c">if (register[x] != register[y])</code></pre>
                     </td>
                     <td>
-                      Hopp over den neste instruksjonen hvis verdien i
-                      register x ikke er lik verdien i register[y].
+                      Hopp over den neste instruksjonen hvis verdien i register
+                      x ikke er lik verdien i register[y].
                     </td>
                   </tr>
                   <tr>
@@ -569,8 +545,8 @@
                       <pre><code class="language-c">goto (register[0] + nnn);</code></pre>
                     </td>
                     <td>
-                      Sett program-registeret til verdien i register 0
-                      pluss nnn.
+                      Sett program-registeret til verdien i register 0 pluss
+                      nnn.
                     </td>
                   </tr>
                   <tr>
@@ -579,9 +555,7 @@
                     <td>
                       <pre><code class="language-c">register[x] = rand() & nn;</code></pre>
                     </td>
-                    <td>
-                      Sett register x til en tilfeldig verdi AND nn.
-                    </td>
+                    <td>Sett register x til en tilfeldig verdi AND nn.</td>
                   </tr>
                   <tr>
                     <td>draw</td>
@@ -591,8 +565,8 @@
                     </td>
                     <td>
                       Tegn dataen ved index-registeret på skjermen ved
-                      koordinatene til register x og register y, som
-                      er 8 piksler bredt og n piksler høyt.
+                      koordinatene til register x og register y, som er 8
+                      piksler bredt og n piksler høyt.
                     </td>
                   </tr>
                   <tr>
@@ -602,8 +576,7 @@
                       <pre><code class="language-c">if (key[x])</code></pre>
                     </td>
                     <td>
-                      Hopp over neste instruksjon hvis knappen x er
-                      trykket.
+                      Hopp over neste instruksjon hvis knappen x er trykket.
                     </td>
                   </tr>
                   <tr>
@@ -613,8 +586,8 @@
                       <pre><code class="language-c">if (!key[x])</code></pre>
                     </td>
                     <td>
-                      Hopp over neste instruksjon hvis knappen x ikke
-                      er trykket.
+                      Hopp over neste instruksjon hvis knappen x ikke er
+                      trykket.
                     </td>
                   </tr>
                   <tr>
@@ -623,9 +596,7 @@
                     <td>
                       <pre><code class="language-c">register[x] = get_timer_1();</code></pre>
                     </td>
-                    <td>
-                      Sett register x lik verdien lagret i klokke 1.
-                    </td>
+                    <td>Sett register x lik verdien lagret i klokke 1.</td>
                   </tr>
                   <tr>
                     <td>get key</td>
@@ -634,8 +605,7 @@
                       <pre><code class="language-c">register[x] = get_key();</code></pre>
                     </td>
                     <td>
-                      Sett register x lik til den neste knappen som er
-                      trykket.
+                      Sett register x lik til den neste knappen som er trykket.
                     </td>
                   </tr>
                   <tr>
@@ -653,8 +623,7 @@
                       <pre><code class="language-c">set_timer_2(register[x])</code></pre>
                     </td>
                     <td>
-                      Sett klokke 2 (lydklokken) til verdien i
-                      register x.
+                      Sett klokke 2 (lydklokken) til verdien i register x.
                     </td>
                   </tr>
                   <tr>
@@ -672,8 +641,8 @@
                       <pre><code class="language-c">index = font_index[x];</code></pre>
                     </td>
                     <td>
-                      Sett index registeret til posisjonen til dataen
-                      for å tegne bokstaven x. (Kun bokstavene i HEX)
+                      Sett index registeret til posisjonen til dataen for å
+                      tegne bokstaven x. (Kun bokstavene i HEX)
                     </td>
                   </tr>
                   <tr>
@@ -687,10 +656,10 @@ ram[index + 1] = (register[x] % 100) % 10;
                     </code></pre>
                     </td>
                     <td>
-                      Ta verdien til register x som et desimaltall, og
-                      lagre hundre-sifferet i minnet ved index
-                      registeret, tier-sifferet ved index + 1 og
-                      entall-sifferet ved index + 2.
+                      Ta verdien til register x som et desimaltall, og lagre
+                      hundre-sifferet i minnet ved index registeret,
+                      tier-sifferet ved index + 1 og entall-sifferet ved index +
+                      2.
                     </td>
                   </tr>
                   <tr>
@@ -700,8 +669,8 @@ ram[index + 1] = (register[x] % 100) % 10;
                       <pre><code class="language-c">store_registers(x);</code></pre>
                     </td>
                     <td>
-                      Lagre verdien av registrene fra 0 opp til x i
-                      minnet ved index-registeret.
+                      Lagre verdien av registrene fra 0 opp til x i minnet ved
+                      index-registeret.
                     </td>
                   </tr>
                   <tr>
@@ -711,8 +680,8 @@ ram[index + 1] = (register[x] % 100) % 10;
                       <pre><code class="language-c">load_registers(x);</code></pre>
                     </td>
                     <td>
-                      Sett verdien til registrene fra 0 opp til x fra
-                      minnet ved index-registeret.
+                      Sett verdien til registrene fra 0 opp til x fra minnet ved
+                      index-registeret.
                     </td>
                   </tr>
                 </tbody>
