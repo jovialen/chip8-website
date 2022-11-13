@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="../styles/common.css" />
 		<link rel="stylesheet" href="../styles/header.css" />
 		<link rel="stylesheet" href="../styles/hero.css" />
+		<link rel="stylesheet" href="../styles/footer.css" />
 
 		<link rel="stylesheet" href="styles/canvas.css" />
 		<link rel="stylesheet" href="styles/actions.css" />
@@ -94,107 +95,128 @@
 				</div>
 			</div>
 		</header>
-
-		<section class="hero">
-			<div class="container">
-				<div class="hero-header">
-					<h1>Prøv selv</h1>
-				</div>
-			</div>
-		</section>
-
-		<section id="disclaimer" class="hide">
-			<div class="container">
-				<div class="disclaimer-header">
-					<h2>Advarsel</h2>
-				</div>
-				<div class="disclaimer-content">
-					<div class="disclaimer-text">
-						<p>Denne framvisningen fungerer kun med et tastatur koblet til.</p>
+		<main>
+			<section class="hero">
+				<div class="container">
+					<div class="hero-header">
+						<h1>Prøv selv</h1>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
 
-		<section id="emulator">
-			<div class="container">
-				<div id="wasm-chip8-canvas" class="centered">
-					<button id="emulatorStarter">Start</button>
-				</div>
-				<div class="actions">
-					<div class="actions-left">
-						<div id="title" class="action">
-							<p>Tre-på-rad</p>
+			<section id="disclaimer" class="hide">
+				<div class="container">
+					<div class="disclaimer-header">
+						<h2>Advarsel</h2>
+					</div>
+					<div class="disclaimer-content">
+						<div class="disclaimer-text">
+							<p>
+								Denne framvisningen fungerer kun med et tastatur koblet til.
+							</p>
 						</div>
 					</div>
-					<div class="actions-right">
-						<a
-							href="https://github.com/kripod/chip8-roms/blob/master/games/Tic-Tac-Toe%20%5BDavid%20Winter%5D.ch8"
-							target="_blank"
-						>
-							<div id="download" class="action">
-								Last ned ROM
-								<img
-									src="https://img.icons8.com/sf-regular-filled/96/FFFFFF/downloads.png"
-									class="action-img"
-								/>
-							</div>
-						</a>
-						<a
-							href="http://github.com/jovialen/chip8"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<div id="github" class="action">
-								Emulatoren på GitHub
-								<img
-									src="https://img.icons8.com/sf-regular-filled/96/null/github.png"
-									class="action-img"
-								/>
-							</div>
-						</a>
-					</div>
 				</div>
-			</div>
-		</section>
+			</section>
 
-		<section id="how-to">
-			<div class="container">
-				<div class="how-to-header">
-					<h2>Tre på rad</h2>
+			<section id="emulator">
+				<div class="container">
+					<div id="wasm-chip8-canvas" class="centered">
+						<button id="emulatorStarter">Start</button>
+					</div>
+					<div class="actions">
+						<div class="actions-left">
+							<div id="title" class="action">
+								<p>Tre-på-rad</p>
+							</div>
+						</div>
+						<div class="actions-right">
+							<a
+								href="https://github.com/kripod/chip8-roms/blob/master/games/Tic-Tac-Toe%20%5BDavid%20Winter%5D.ch8"
+								target="_blank"
+							>
+								<div id="download" class="action">
+									Last ned ROM
+									<img
+										src="https://img.icons8.com/sf-regular-filled/96/FFFFFF/downloads.png"
+										class="action-img"
+									/>
+								</div>
+							</a>
+							<a
+								href="http://github.com/jovialen/chip8"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<div id="github" class="action">
+									Emulatoren på GitHub
+									<img
+										src="https://img.icons8.com/sf-regular-filled/96/null/github.png"
+										class="action-img"
+									/>
+								</div>
+							</a>
+						</div>
+					</div>
 				</div>
-				<div class="how-to-content">
-					<div class="how-to-text">
-						<p>
-							I denne framvisningen av chipen, er ROMen for spillet tre på rad
-							lastet inn i RAM minnet. Akkurat som i vanlig tre-på-rad er målet
-							å få tre av sine egne ruter på rad, mens man blokkerer
-							motspilleren.
-						</p>
-						<p>
-							For å plassere en brikke på brettet, trykk på tasten på tastaturet
-							som passer overens med ruten på brettet.
-						</p>
-						<table id="keypad">
-							<tr>
-								<th>1</th>
-								<th>2</th>
-								<th>3</th>
-							</tr>
-							<tr>
-								<th>Q</th>
-								<th>W</th>
-								<th>E</th>
-							</tr>
-							<tr>
-								<th>A</th>
-								<th>S</th>
-								<th>D</th>
-							</tr>
-						</table>
+			</section>
+
+			<section id="how-to">
+				<div class="container">
+					<div class="how-to-header">
+						<h2>Tre på rad</h2>
+					</div>
+					<div class="how-to-content">
+						<div class="how-to-text">
+							<p>
+								I denne framvisningen av chipen, er ROMen for spillet tre på rad
+								lastet inn i RAM minnet. Akkurat som i vanlig tre-på-rad er
+								målet å få tre av sine egne ruter på rad, mens man blokkerer
+								motspilleren.
+							</p>
+							<p>
+								For å plassere en brikke på brettet, trykk på tasten på
+								tastaturet som passer overens med ruten på brettet.
+							</p>
+							<table id="keypad">
+								<tr>
+									<th>1</th>
+									<th>2</th>
+									<th>3</th>
+								</tr>
+								<tr>
+									<th>Q</th>
+									<th>W</th>
+									<th>E</th>
+								</tr>
+								<tr>
+									<th>A</th>
+									<th>S</th>
+									<th>D</th>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<div class="container">
+				<div class="footer-header">
+					<h1>Jovialen</h1>
+				</div>
+				<div class="footer-content">
+					<p>Nicolai Frigaard © 2022</p>
+				</div>
+				<div class="footer-nav columns">
+					<div class="footer-item">
+						<a href="../README.md" class="footer-link">README.md</a>
+					</div>
+					<div class="footer-item">
+						<a href="../LICENSE" class="footer-link">LICENSE</a>
 					</div>
 				</div>
 			</div>
-		</section>
+		</footer>
 	</body>
 </html>
