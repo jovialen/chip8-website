@@ -1,0 +1,30 @@
+footer {
+	padding: 1rem;
+	border-top: 2px solid;
+	border-image: linear-gradient(
+			to right,
+			#42a5f5 25%,
+			#ff9800 25%,
+			#ff9800 50%,
+			#ef5350 50%,
+			#ef5350 75%,
+			#7cb342 75%
+		)
+		2;
+
+	text-align: center;
+}
+
+footer * {
+	margin: 0.2rem;
+}
+
+.footer-nav {
+	display: flex;
+	gap: 2rem;
+	justify-content: center;
+}
+
+.footer-link {
+	text-decoration: underline;
+}
