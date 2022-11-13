@@ -1,0 +1,67 @@
+.actions {
+  display: flex;
+
+  margin: 0.5rem 0;
+}
+
+.actions-left,
+.actions-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.actions-right {
+  margin-left: auto;
+}
+
+.actions-left {
+  margin-right: auto;
+}
+
+.action {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+  align-items: center;
+
+  padding: 0.5rem;
+
+  transition: 200ms;
+}
+
+.actions-left .action {
+  margin-right: 0.5em;
+}
+
+.actions-right .action {
+  margin-left: 0.5em;
+}
+
+.action-img {
+  width: auto;
+  height: 1.5em;
+}
+
+#title {
+  font-size: 1.2rem;
+  font-weight: 200;
+}
+
+#download {
+  color: white;
+  background-color: #ef5350;
+}
+
+#download:hover {
+  background-color: #db4240;
+}
+
+#github {
+  background-color: #f5f5f5;
+  border: 1px solid #d0d0d0;
+}
+
+#github:hover {
+  background-color: #d0d0d0;
+}

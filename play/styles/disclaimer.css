@@ -1,0 +1,10 @@
+#disclaimer {
+  padding: 1rem 0;
+
+  color: white;
+  background-color: #db4340f0;
+}
+
+.disclaimer-header h2 {
+  font-weight: 400;
+}
