@@ -1,0 +1,33 @@
+#wasm-chip8-canvas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 1rem;
+    aspect-ratio: 2 / 1;
+
+    background: linear-gradient(45deg, #42A5F5 25%, #FF9800 25%, #FF9800 50%, #EF5350 50%, #EF5350 75%, #7CB342 75%);
+}
+
+#emulatorStarter {
+    font-size: 2rem;
+    font-weight: 200;
+    padding: 0.5rem 1rem;
+
+    border: none;
+    background: #ffffffee;
+    
+    transition: 200ms;
+}
+
+#emulatorStarter:hover {
+    background-color: #ffffffcc;
+}
+
+#emulatorStarter:active {
+    background-color: #ffffffff;
+}
+
+.hide {
+    display: none;
+}

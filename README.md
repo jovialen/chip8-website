@@ -8,6 +8,7 @@
 - <a target="_blank" href="https://icons8.com/icon/S5biqohaDgd1/menu-rounded">Menu Rounded icon by Icons8</a>
 - <a target="_blank" href="https://icons8.com/icon/4Sjrm3bwm9Lv/smartphone-ram">Smartphone RAM icon by Icons8</a>
 - <a target="_blank" href="https://icons8.com/icon/9yIsfC9VistG/memory-slot">Memory Slot icon by Icons8</a>
+- <a target="_blank" href="https://icons8.com/icon/Uh8hvgeb99i5/play">Play icon by Icons8</a>
 
 ## Sources
 

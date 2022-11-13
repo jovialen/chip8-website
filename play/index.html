@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../styles/common.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/hero.css" />
+
+    <link rel="stylesheet" href="styles/canvas.css" />
+
+    <link
+      rel="shortcut icon"
+      href="https://img.icons8.com/sf-regular-filled/96/EF5350/play.png"
+      type="image/x-icon"
+    />
+
+    <script src="../javascript/navbar.js"></script>
+
+    <title>Chip 8 - Prøv selv</title>
+  </head>
+  <body>
+    <header>
+      <div class="columns container">
+        <div class="header-left">
+          <div class="header-title">
+            <a href="..">
+              <h1>Chip 8</h1>
+            </a>
+          </div>
+        </div>
+        <div id="navbar" class="header-middle">
+          <nav>
+            <a href=".." class="nav-item">
+              <img
+                src="https://img.icons8.com/sf-regular-filled/96/42A5F5/home-page.png"
+                class="nav-img"
+              />
+              Hjem
+            </a>
+            <a href="../cpu" class="nav-item">
+              <img
+                src="https://img.icons8.com/sf-regular-filled/96/FF9800/electronics.png"
+                class="nav-img"
+              />
+              CPU
+            </a>
+            <a href="../gpu" class="nav-item">
+              <img
+                src="https://img.icons8.com/sf-regular-filled/96/EF5350/video-card.png"
+                class="nav-img"
+              />
+              GPU
+            </a>
+            <a href="../memory" class="nav-item">
+              <img
+                src="https://img.icons8.com/sf-regular-filled/96/7CB342/memory-slot.png"
+                class="nav-img"
+              />
+              RAM
+            </a>
+          </nav>
+          <div
+            class="nav-toggle nav-item"
+            onclick="toggleNavbar()"
+            style="margin-left: auto"
+          >
+            <img
+              src="https://img.icons8.com/ios-glyphs/90/null/menu-rounded.png"
+              class="nav-img"
+            />
+          </div>
+        </div>
+        <div class="header-right">
+          <a
+            href="https://github.com/jovialen/chip8"
+            target="_blank"
+            class="nav-item"
+          >
+            GitHub
+            <img
+              class="nav-img"
+              src="https://img.icons8.com/sf-regular-filled/96/000000/github.png"
+            />
+          </a>
+          <div class="nav-toggle nav-item" onclick="toggleNavbar()">
+            <img
+              src="https://img.icons8.com/ios-glyphs/90/null/menu-rounded.png"
+              class="nav-img"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero-header">
+          <h1>Prøv selv</h1>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div id="wasm-chip8-canvas" class="centered">
+          <button id="emulatorStarter">Start</button>
+        </div>
+        <script type="module">
+          import init from "./assets/wasm/emulator/chip8_emu.js";
+
+          document
+            .getElementById("emulatorStarter")
+            .addEventListener("click", startEmulator);
+
+          function startEmulator() {
+            document.getElementById("emulatorStarter").classList.add("hide");
+
+            init().then(() => {
+              console.log("Loaded WASM");
+
+              let parent = document.getElementById("wasm-chip8-canvas");
+              parent.lastElementChild.style.width = "100%";
+              parent.lastElementChild.style.height = "100%";
+              parent.lastElementChild.focus();
+            });
+          }
+        </script>
+      </div>
+    </section>
+  </body>
+</html>
