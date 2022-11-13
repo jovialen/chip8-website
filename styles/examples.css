@@ -36,7 +36,11 @@
     z-index: 2;
 }
 
-.example-card-text {
+.example-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     position: relative;
     top: -8px;
 
@@ -44,7 +48,6 @@
     padding: 1rem;
 
     z-index: 1;
-
     border: 2px solid;
     border-top: none;
     border-image: linear-gradient(45deg, #42A5F5 25%, #FF9800 25%, #FF9800 50%, #EF5350 50%, #EF5350 75%, #7CB342 75%) 2;
@@ -53,6 +56,23 @@
 .example-card-text h2 {
     font-size: 1.5rem;
     font-weight: 400;
+}
+
+.example-card-action {
+    padding-top: 0.5rem;
+}
+
+.example-card-link {
+    text-decoration: underline;
+    color: #0000ff;
+}
+
+.example-card-link:hover {
+    color: #3434f8;
+}
+
+.example-card-link:visited {
+    color: darkblue;
 }
 
 @media (max-width: 860px) {
