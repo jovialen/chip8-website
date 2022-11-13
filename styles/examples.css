@@ -1,97 +1,97 @@
 .examples {
-  padding: 2rem;
+	padding: 2rem;
 }
 
 .examples-header h2 {
-  font-size: 2rem;
-  font-weight: 200;
-  text-align: center;
+	font-size: 2rem;
+	font-weight: 200;
+	text-align: center;
 }
 
 .example-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 1rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 1rem;
 
-  max-width: 100%;
-  padding: 1rem;
+	max-width: 100%;
+	padding: 1rem;
 }
 
 .example-card {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 
-  background-color: white;
-  flex-grow: 1;
+	background-color: white;
+	flex-grow: 1;
 }
 
 .example-img {
-  position: relative;
-  left: 50%;
-  width: 102%;
-  transform: translate(-50%, 0);
+	position: relative;
+	left: 50%;
+	width: 102%;
+	transform: translate(-50%, 0);
 
-  margin: 0;
+	margin: 0;
 
-  z-index: 2;
+	z-index: 2;
 }
 
 .example-card-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 
-  position: relative;
-  top: -8px;
+	position: relative;
+	top: -8px;
 
-  flex-grow: 1;
-  padding: 1rem;
+	flex-grow: 1;
+	padding: 1rem;
 
-  z-index: 1;
-  border: 2px solid;
-  border-top: none;
-  border-image: linear-gradient(
-      45deg,
-      #42a5f5 25%,
-      #ff9800 25%,
-      #ff9800 50%,
-      #ef5350 50%,
-      #ef5350 75%,
-      #7cb342 75%
-    )
-    2;
+	z-index: 1;
+	border: 2px solid;
+	border-top: none;
+	border-image: linear-gradient(
+			45deg,
+			#42a5f5 25%,
+			#ff9800 25%,
+			#ff9800 50%,
+			#ef5350 50%,
+			#ef5350 75%,
+			#7cb342 75%
+		)
+		2;
 }
 
 .example-card-text h2 {
-  font-size: 1.5rem;
-  font-weight: 400;
+	font-size: 1.5rem;
+	font-weight: 400;
 }
 
 .example-card-action {
-  padding-top: 0.5rem;
+	padding-top: 0.5rem;
 }
 
 .example-card-link {
-  text-decoration: underline;
-  color: #0000ff;
+	text-decoration: underline;
+	color: #0000ff;
 }
 
 .example-card-link:hover {
-  color: #3434f8;
+	color: #3434f8;
 }
 
 .example-card-link:visited {
-  color: darkblue;
+	color: darkblue;
 }
 
 @media (max-width: 860px) {
-  .example-cards {
-    grid-template-columns: 1fr 1fr;
-  }
+	.example-cards {
+		grid-template-columns: 1fr 1fr;
+	}
 }
 
 @media (max-width: 550px) {
-  .example-cards {
-    grid-template-columns: 1fr;
-  }
+	.example-cards {
+		grid-template-columns: 1fr;
+	}
 }

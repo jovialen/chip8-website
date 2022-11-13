@@ -1,258 +1,258 @@
 <!DOCTYPE html>
 <html lang="no">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="../styles/common.css" />
-    <link rel="stylesheet" href="../styles/header.css" />
-    <link rel="stylesheet" href="../styles/hero.css" />
+		<link rel="stylesheet" href="../styles/common.css" />
+		<link rel="stylesheet" href="../styles/header.css" />
+		<link rel="stylesheet" href="../styles/hero.css" />
 
-    <link rel="stylesheet" href="../cpu/styles/components.css" />
+		<link rel="stylesheet" href="../cpu/styles/components.css" />
 
-    <link rel="stylesheet" href="styles/about.css" />
+		<link rel="stylesheet" href="styles/about.css" />
 
-    <link
-      rel="shortcut icon"
-      href="https://img.icons8.com/sf-regular-filled/96/7CB342/memory-slot.png"
-      type="image/x-icon"
-    />
+		<link
+			rel="shortcut icon"
+			href="https://img.icons8.com/sf-regular-filled/96/7CB342/memory-slot.png"
+			type="image/x-icon"
+		/>
 
-    <script src="../javascript/navbar.js"></script>
+		<script src="../javascript/navbar.js"></script>
 
-    <title>Chip 8 - RAM</title>
-  </head>
-  <body>
-    <header>
-      <div class="columns container">
-        <div class="header-left">
-          <div class="header-title">
-            <a href="..">
-              <h1>Chip 8</h1>
-            </a>
-          </div>
-        </div>
-        <div id="navbar" class="header-middle">
-          <nav>
-            <a href=".." class="nav-item">
-              <img
-                src="https://img.icons8.com/sf-regular-filled/96/42A5F5/home-page.png"
-                class="nav-img"
-              />
-              Hjem
-            </a>
-            <a href="../cpu" class="nav-item">
-              <img
-                src="https://img.icons8.com/sf-regular-filled/96/FF9800/electronics.png"
-                class="nav-img"
-              />
-              CPU
-            </a>
-            <a href="../gpu" class="nav-item">
-              <img
-                src="https://img.icons8.com/sf-regular-filled/96/EF5350/video-card.png"
-                class="nav-img"
-              />
-              GPU
-            </a>
-            <a href="#" class="nav-item">
-              <img
-                src="https://img.icons8.com/sf-regular-filled/96/7CB342/memory-slot.png"
-                class="nav-img"
-              />
-              RAM
-            </a>
-          </nav>
-          <div
-            class="nav-toggle nav-item"
-            onclick="toggleNavbar()"
-            style="margin-left: auto"
-          >
-            <img
-              src="https://img.icons8.com/ios-glyphs/90/null/menu-rounded.png"
-              class="nav-img"
-            />
-          </div>
-        </div>
-        <div class="header-right">
-          <a href="../play" class="nav-item">
-            Prøv Selv
-            <img
-              class="nav-img"
-              src="https://img.icons8.com/sf-regular-filled/96/000000/joystick.png"
-            />
-          </a>
-          <div class="nav-toggle nav-item" onclick="toggleNavbar()">
-            <img
-              src="https://img.icons8.com/ios-glyphs/90/null/menu-rounded.png"
-              class="nav-img"
-            />
-          </div>
-        </div>
-      </div>
-    </header>
-    <main>
-      <section class="hero">
-        <div class="container">
-          <div class="hero-header">
-            <h1>RAM Minne</h1>
-            <p>Hva var det jeg skulle skrive her igjen?</p>
-          </div>
-        </div>
-      </section>
-      <div class="about">
-        <section id="what">
-          <div class="container">
-            <div class="about-header">
-              <h2>Hva er RAM?</h2>
-            </div>
-            <div class="about-content">
-              <div class="about-text">
-                <p>
-                  RAM står for "Random Access Memory", og kan sammenlignes med
-                  en persons kortidsminne. RAM er laget for å kunne leses av og
-                  skrives til så fort som overhodet mulig, på bekostning av at
-                  dataen i RAMen forsvinner når datamaskinen slås av. RAM er
-                  sjeldent den eneste formen for minne i en datamaskin, men den
-                  er den viktigste.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+		<title>Chip 8 - RAM</title>
+	</head>
+	<body>
+		<header>
+			<div class="columns container">
+				<div class="header-left">
+					<div class="header-title">
+						<a href="..">
+							<h1>Chip 8</h1>
+						</a>
+					</div>
+				</div>
+				<div id="navbar" class="header-middle">
+					<nav>
+						<a href=".." class="nav-item">
+							<img
+								src="https://img.icons8.com/sf-regular-filled/96/42A5F5/home-page.png"
+								class="nav-img"
+							/>
+							Hjem
+						</a>
+						<a href="../cpu" class="nav-item">
+							<img
+								src="https://img.icons8.com/sf-regular-filled/96/FF9800/electronics.png"
+								class="nav-img"
+							/>
+							CPU
+						</a>
+						<a href="../gpu" class="nav-item">
+							<img
+								src="https://img.icons8.com/sf-regular-filled/96/EF5350/video-card.png"
+								class="nav-img"
+							/>
+							GPU
+						</a>
+						<a href="#" class="nav-item">
+							<img
+								src="https://img.icons8.com/sf-regular-filled/96/7CB342/memory-slot.png"
+								class="nav-img"
+							/>
+							RAM
+						</a>
+					</nav>
+					<div
+						class="nav-toggle nav-item"
+						onclick="toggleNavbar()"
+						style="margin-left: auto"
+					>
+						<img
+							src="https://img.icons8.com/ios-glyphs/90/null/menu-rounded.png"
+							class="nav-img"
+						/>
+					</div>
+				</div>
+				<div class="header-right">
+					<a href="../play" class="nav-item">
+						Prøv Selv
+						<img
+							class="nav-img"
+							src="https://img.icons8.com/sf-regular-filled/96/000000/joystick.png"
+						/>
+					</a>
+					<div class="nav-toggle nav-item" onclick="toggleNavbar()">
+						<img
+							src="https://img.icons8.com/ios-glyphs/90/null/menu-rounded.png"
+							class="nav-img"
+						/>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main>
+			<section class="hero">
+				<div class="container">
+					<div class="hero-header">
+						<h1>RAM Minne</h1>
+						<p>Hva var det jeg skulle skrive her igjen?</p>
+					</div>
+				</div>
+			</section>
+			<div class="about">
+				<section id="what">
+					<div class="container">
+						<div class="about-header">
+							<h2>Hva er RAM?</h2>
+						</div>
+						<div class="about-content">
+							<div class="about-text">
+								<p>
+									RAM står for "Random Access Memory", og kan sammenlignes med
+									en persons kortidsminne. RAM er laget for å kunne leses av og
+									skrives til så fort som overhodet mulig, på bekostning av at
+									dataen i RAMen forsvinner når datamaskinen slås av. RAM er
+									sjeldent den eneste formen for minne i en datamaskin, men den
+									er den viktigste.
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
 
-        <section id="unique">
-          <div class="container">
-            <div class="about-header">
-              <h2>Hva gjør RAM unikt?</h2>
-            </div>
-            <div class="about-content">
-              <div class="about-text">
-                <p>
-                  Utenom RAM minne finnes det også ROM minne og fastminne. ROM
-                  minne, eller "Read-Only Memory", er som navnet foreslår minne
-                  som kun kan leses fra, som CD-er eller gamle spillkassetter.
-                  ROM bruktes til å lagre data som aldri kom til å forandre seg,
-                  som spill man kjøpte til konsoller eller andre dataprogrammer.
-                  Fastminne er minnet som du bruker oftest, ettersom at det kan
-                  både leses fra og skrives til, samt lagres selv etter at
-                  maskinen har blitt skrudd av. Når du går gjennom filsystemet
-                  ditt, er det fastminnet du ser. Dessverre er fastminne svert
-                  tregt å bruke, som betyr at det ikke er realistisk å bruke
-                  fastminne til å lagre data som variabler og annen midlertidig
-                  data.
-                </p>
-              </div>
-              <div class="about-img-container">
-                <img
-                  src="assets/images/filesystem.png"
-                  alt="Bilde av et filsystem"
-                  class="about-img"
-                />
-              </div>
-            </div>
-            <div class="about-content">
-              <div class="about-text">
-                <p>
-                  For dette har vi RAM minne. RAM er ekstremt raskt å både lese
-                  av og skrive til, som gjør det til den beste måten å lagre
-                  data CPUen trenger kjapp tilgang til. Når CPUen trenger noe
-                  fra fastminne eller ROM minne, kan den bare kopiere dataen
-                  over til RAM, og derfra bruke dataen fritt.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+				<section id="unique">
+					<div class="container">
+						<div class="about-header">
+							<h2>Hva gjør RAM unikt?</h2>
+						</div>
+						<div class="about-content">
+							<div class="about-text">
+								<p>
+									Utenom RAM minne finnes det også ROM minne og fastminne. ROM
+									minne, eller "Read-Only Memory", er som navnet foreslår minne
+									som kun kan leses fra, som CD-er eller gamle spillkassetter.
+									ROM bruktes til å lagre data som aldri kom til å forandre seg,
+									som spill man kjøpte til konsoller eller andre dataprogrammer.
+									Fastminne er minnet som du bruker oftest, ettersom at det kan
+									både leses fra og skrives til, samt lagres selv etter at
+									maskinen har blitt skrudd av. Når du går gjennom filsystemet
+									ditt, er det fastminnet du ser. Dessverre er fastminne svert
+									tregt å bruke, som betyr at det ikke er realistisk å bruke
+									fastminne til å lagre data som variabler og annen midlertidig
+									data.
+								</p>
+							</div>
+							<div class="about-img-container">
+								<img
+									src="assets/images/filesystem.png"
+									alt="Bilde av et filsystem"
+									class="about-img"
+								/>
+							</div>
+						</div>
+						<div class="about-content">
+							<div class="about-text">
+								<p>
+									For dette har vi RAM minne. RAM er ekstremt raskt å både lese
+									av og skrive til, som gjør det til den beste måten å lagre
+									data CPUen trenger kjapp tilgang til. Når CPUen trenger noe
+									fra fastminne eller ROM minne, kan den bare kopiere dataen
+									over til RAM, og derfra bruke dataen fritt.
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
 
-        <section id="how">
-          <div class="container">
-            <div class="about-header">
-              <h2>Hvordan fungerer RAM?</h2>
-            </div>
-            <div class="about-content">
-              <div class="about-text">
-                <p>
-                  Grunnen til at RAM er så raskt er på grunn av hvordan det er
-                  satt opp. Inni en RAM-brikke er det et rutenett av bytes. Når
-                  CPUen vil lese eller skrive til RAM minnet, sier den hvilken
-                  rad og hvilken kolonne den vil bruke, og kan da enten skrive
-                  data til byten på den posisjonen, eller lese av verdien byten
-                  allerede hadde. Så lenge det går strøm gjennom RAM-brikken,
-                  vil bytene forbli det samme. Når strømmen slås av, så går alle
-                  bytene i brikken tapt.
-                </p>
-              </div>
-              <div class="about-img-container">
-                <img
-                  src="assets/images/ram_internal.png"
-                  alt="Diagram av RAM minne"
-                  class="about-img"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
+				<section id="how">
+					<div class="container">
+						<div class="about-header">
+							<h2>Hvordan fungerer RAM?</h2>
+						</div>
+						<div class="about-content">
+							<div class="about-text">
+								<p>
+									Grunnen til at RAM er så raskt er på grunn av hvordan det er
+									satt opp. Inni en RAM-brikke er det et rutenett av bytes. Når
+									CPUen vil lese eller skrive til RAM minnet, sier den hvilken
+									rad og hvilken kolonne den vil bruke, og kan da enten skrive
+									data til byten på den posisjonen, eller lese av verdien byten
+									allerede hadde. Så lenge det går strøm gjennom RAM-brikken,
+									vil bytene forbli det samme. Når strømmen slås av, så går alle
+									bytene i brikken tapt.
+								</p>
+							</div>
+							<div class="about-img-container">
+								<img
+									src="assets/images/ram_internal.png"
+									alt="Diagram av RAM minne"
+									class="about-img"
+								/>
+							</div>
+						</div>
+					</div>
+				</section>
 
-        <section id="use">
-          <div class="container">
-            <div class="about-header">
-              <h2>Hvordan brukes RAM?</h2>
-            </div>
-            <div class="about-content">
-              <div class="about-text">
-                <p>
-                  For å holde orden på dataen lagret i en RAM brikke, brukes det
-                  ofte faste systemer på hvilken data er lagret hvor. I moderne
-                  datamaskiner innebærer det avsatte områder for fastdata,
-                  program-data, variabler, osv. Heldigvis er Chip 8 en svert
-                  enkel datamaskin. Chip 8 har 4kB med RAM minne. De første 512
-                  bytene er avsatt for bruk av selve datamaskinen, mens bytene
-                  fra 512 til 4096 er til fritt bruk av programmet som kjører.
-                  Programmet lastes også inn fra en ROM inn i RAM fra posisjon
-                  512 og fremover. Chip 8 har ikke noe fastminne.
-                </p>
-              </div>
-              <div class="about-img-container">
-                <img
-                  src="assets/images/memory_layout.png"
-                  alt="Diagram av minnet inni en Chip 8"
-                  class="about-img"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
+				<section id="use">
+					<div class="container">
+						<div class="about-header">
+							<h2>Hvordan brukes RAM?</h2>
+						</div>
+						<div class="about-content">
+							<div class="about-text">
+								<p>
+									For å holde orden på dataen lagret i en RAM brikke, brukes det
+									ofte faste systemer på hvilken data er lagret hvor. I moderne
+									datamaskiner innebærer det avsatte områder for fastdata,
+									program-data, variabler, osv. Heldigvis er Chip 8 en svert
+									enkel datamaskin. Chip 8 har 4kB med RAM minne. De første 512
+									bytene er avsatt for bruk av selve datamaskinen, mens bytene
+									fra 512 til 4096 er til fritt bruk av programmet som kjører.
+									Programmet lastes også inn fra en ROM inn i RAM fra posisjon
+									512 og fremover. Chip 8 har ikke noe fastminne.
+								</p>
+							</div>
+							<div class="about-img-container">
+								<img
+									src="assets/images/memory_layout.png"
+									alt="Diagram av minnet inni en Chip 8"
+									class="about-img"
+								/>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
 
-      <section class="components">
-        <div class="container">
-          <div class="components-header">
-            <h1>Lær også om</h1>
-          </div>
-          <div class="component-cards centered columns">
-            <div class="component cpu">
-              <a href="../cpu" class="component-card">
-                <img
-                  src="https://img.icons8.com/sf-regular-filled/96/FF9800/electronics.png"
-                  class="component-card-img"
-                />
-                Prosessoren
-              </a>
-            </div>
-            <div class="component gpu">
-              <a href="../gpu" class="component-card">
-                <img
-                  src="https://img.icons8.com/sf-regular-filled/96/EF5350/video-card.png"
-                  class="component-card-img"
-                />
-                Grafikkortet
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-  </body>
+			<section class="components">
+				<div class="container">
+					<div class="components-header">
+						<h1>Lær også om</h1>
+					</div>
+					<div class="component-cards centered columns">
+						<div class="component cpu">
+							<a href="../cpu" class="component-card">
+								<img
+									src="https://img.icons8.com/sf-regular-filled/96/FF9800/electronics.png"
+									class="component-card-img"
+								/>
+								Prosessoren
+							</a>
+						</div>
+						<div class="component gpu">
+							<a href="../gpu" class="component-card">
+								<img
+									src="https://img.icons8.com/sf-regular-filled/96/EF5350/video-card.png"
+									class="component-card-img"
+								/>
+								Grafikkortet
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</body>
 </html>

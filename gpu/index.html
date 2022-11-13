@@ -1,324 +1,324 @@
 <!DOCTYPE html>
 <html lang="no">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="../styles/common.css" />
-    <link rel="stylesheet" href="../styles/header.css" />
-    <link rel="stylesheet" href="../styles/hero.css" />
+		<link rel="stylesheet" href="../styles/common.css" />
+		<link rel="stylesheet" href="../styles/header.css" />
+		<link rel="stylesheet" href="../styles/hero.css" />
 
-    <!-- Resirkulering er bra for deg-->
-    <link rel="stylesheet" href="../cpu/styles/about.css" />
-    <link rel="stylesheet" href="../cpu/styles/components.css" />
+		<!-- Resirkulering er bra for deg-->
+		<link rel="stylesheet" href="../cpu/styles/about.css" />
+		<link rel="stylesheet" href="../cpu/styles/components.css" />
 
-    <link
-      rel="shortcut icon"
-      href="https://img.icons8.com/sf-regular-filled/96/EF5350/video-card.png"
-      type="image/x-icon"
-    />
+		<link
+			rel="shortcut icon"
+			href="https://img.icons8.com/sf-regular-filled/96/EF5350/video-card.png"
+			type="image/x-icon"
+		/>
 
-    <script src="../javascript/navbar.js"></script>
+		<script src="../javascript/navbar.js"></script>
 
-    <title>Chip 8 - GPU</title>
-  </head>
-  <body>
-    <header>
-      <div class="columns container">
-        <div class="header-left">
-          <div class="header-title">
-            <a href="..">
-              <h1>Chip 8</h1>
-            </a>
-          </div>
-        </div>
-        <div id="navbar" class="header-middle">
-          <nav>
-            <a href=".." class="nav-item">
-              <img
-                src="https://img.icons8.com/sf-regular-filled/96/42A5F5/home-page.png"
-                class="nav-img"
-              />
-              Hjem
-            </a>
-            <a href="../cpu" class="nav-item">
-              <img
-                src="https://img.icons8.com/sf-regular-filled/96/FF9800/electronics.png"
-                class="nav-img"
-              />
-              CPU
-            </a>
-            <a href="#" class="nav-item">
-              <img
-                src="https://img.icons8.com/sf-regular-filled/96/EF5350/video-card.png"
-                class="nav-img"
-              />
-              GPU
-            </a>
-            <a href="../memory" class="nav-item">
-              <img
-                src="https://img.icons8.com/sf-regular-filled/96/7CB342/memory-slot.png"
-                class="nav-img"
-              />
-              RAM
-            </a>
-          </nav>
-          <div
-            class="nav-toggle nav-item"
-            onclick="toggleNavbar()"
-            style="margin-left: auto"
-          >
-            <img
-              src="https://img.icons8.com/ios-glyphs/90/null/menu-rounded.png"
-              class="nav-img"
-            />
-          </div>
-        </div>
-        <div class="header-right">
-          <a href="../play" class="nav-item">
-            Prøv Selv
-            <img
-              class="nav-img"
-              src="https://img.icons8.com/sf-regular-filled/96/000000/joystick.png"
-            />
-          </a>
-          <div class="nav-toggle nav-item" onclick="toggleNavbar()">
-            <img
-              src="https://img.icons8.com/ios-glyphs/90/null/menu-rounded.png"
-              class="nav-img"
-            />
-          </div>
-        </div>
-      </div>
-    </header>
-    <main>
-      <section class="hero">
-        <div class="container">
-          <div class="hero-header">
-            <h1>Grafikkortet</h1>
-            <p>Farger! Fart! Fantastisk!</p>
-          </div>
-        </div>
-      </section>
-      <div class="about">
-        <section id="what">
-          <div class="container">
-            <div class="about-header">
-              <h2>Hva er en GPU?</h2>
-            </div>
-            <div class="about-content">
-              <div class="about-text">
-                <p>
-                  GPU står for "Graphics Processing Unit", og er en komponent i
-                  en datamaskin ansvarlig for å bestemme fargen av alle pikslene
-                  på skjermen. Alt som du ser på skjermen var bygget opp av
-                  grafikkortet. GPUen mottar instruksjoner om hvordan den skal
-                  bestemme fargen til hver piksel fra CPUen, og kan gjøre det
-                  med lynfart.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="why">
-          <div class="container">
-            <div class="about-header">
-              <h2>Hvorfor ikke bare bruke CPUen?</h2>
-            </div>
-            <div class="about-content">
-              <div class="about-text">
-                <p>
-                  De aller første datamaskinene brukte CPUen til å tegne til
-                  skjermen, men ettersom at skjermene ble større og innholdet
-                  mer komplisert, viste det seg at man trengte en dedikert
-                  komponent til oppgaven. GPUen er spesialisert til å tegne til
-                  skjermen siden den består av mange små prosessorer som kan
-                  kjøre samtidig. Dette lar GPUen skrive til flere piksler
-                  samtidig, som gjør den mye mer effektiv. I tillegg kan også
-                  CPUen fortsette å jobbe imens GPUen tegner, som gjør hele
-                  datamaskinen mye raskere.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="overview">
-          <div class="container">
-            <div class="about-header">
-              <h2>Komponentene til GPUen</h2>
-            </div>
-            <div class="about-content">
-              <div class="about-text">
-                <p>
-                  GPUen har 4 hovedkomponenter som den bruker for å fullføre
-                  oppgaven sin så fort som overhodet mulig:
-                </p>
-                <ul>
-                  <li>VRAM</li>
-                  <li>GCA</li>
-                  <li>VPU</li>
-                  <li>DIF</li>
-                </ul>
-              </div>
-              <div class="about-img-container">
-                <img
-                  src="assets/images/gpu_internal.png"
-                  alt="Diagram av innsiden til en GPU"
-                  class="about-img"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="vram">
-          <div class="container">
-            <div class="about-header">
-              <h3>VRAM</h3>
-            </div>
-            <div class="about-content">
-              <div class="about-text">
-                <p>
-                  CPUen bruker RAM til å lagre data i kortidsminne, men GPUen
-                  trenger også å gjøre det samme. Dessverre kan kun 1 komponent
-                  få tilgang til RAM til enhver tid. Det vil si at hvis både
-                  CPUen og GPUen skulle bruke samme RAM, ville mye tid bli
-                  mistet ved at de venter på hverandre. Derfor har GPUen en egen
-                  RAM. Denne heter VRAM, eller "Video RAM". VRAM blir kun brukt
-                  av GPUen til vanlig, og CPUen når den trenger å kommunisere
-                  med GPUen.
-                </p>
-                <p>
-                  I VRAM lagres resursene som GPUen bruker, og resultatet av
-                  arbeidet til GPUen. CPUen laster opp resurser til GPUen, og
-                  GPUen bruker de til å lage bildet CPUen vil ha.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+		<title>Chip 8 - GPU</title>
+	</head>
+	<body>
+		<header>
+			<div class="columns container">
+				<div class="header-left">
+					<div class="header-title">
+						<a href="..">
+							<h1>Chip 8</h1>
+						</a>
+					</div>
+				</div>
+				<div id="navbar" class="header-middle">
+					<nav>
+						<a href=".." class="nav-item">
+							<img
+								src="https://img.icons8.com/sf-regular-filled/96/42A5F5/home-page.png"
+								class="nav-img"
+							/>
+							Hjem
+						</a>
+						<a href="../cpu" class="nav-item">
+							<img
+								src="https://img.icons8.com/sf-regular-filled/96/FF9800/electronics.png"
+								class="nav-img"
+							/>
+							CPU
+						</a>
+						<a href="#" class="nav-item">
+							<img
+								src="https://img.icons8.com/sf-regular-filled/96/EF5350/video-card.png"
+								class="nav-img"
+							/>
+							GPU
+						</a>
+						<a href="../memory" class="nav-item">
+							<img
+								src="https://img.icons8.com/sf-regular-filled/96/7CB342/memory-slot.png"
+								class="nav-img"
+							/>
+							RAM
+						</a>
+					</nav>
+					<div
+						class="nav-toggle nav-item"
+						onclick="toggleNavbar()"
+						style="margin-left: auto"
+					>
+						<img
+							src="https://img.icons8.com/ios-glyphs/90/null/menu-rounded.png"
+							class="nav-img"
+						/>
+					</div>
+				</div>
+				<div class="header-right">
+					<a href="../play" class="nav-item">
+						Prøv Selv
+						<img
+							class="nav-img"
+							src="https://img.icons8.com/sf-regular-filled/96/000000/joystick.png"
+						/>
+					</a>
+					<div class="nav-toggle nav-item" onclick="toggleNavbar()">
+						<img
+							src="https://img.icons8.com/ios-glyphs/90/null/menu-rounded.png"
+							class="nav-img"
+						/>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main>
+			<section class="hero">
+				<div class="container">
+					<div class="hero-header">
+						<h1>Grafikkortet</h1>
+						<p>Farger! Fart! Fantastisk!</p>
+					</div>
+				</div>
+			</section>
+			<div class="about">
+				<section id="what">
+					<div class="container">
+						<div class="about-header">
+							<h2>Hva er en GPU?</h2>
+						</div>
+						<div class="about-content">
+							<div class="about-text">
+								<p>
+									GPU står for "Graphics Processing Unit", og er en komponent i
+									en datamaskin ansvarlig for å bestemme fargen av alle pikslene
+									på skjermen. Alt som du ser på skjermen var bygget opp av
+									grafikkortet. GPUen mottar instruksjoner om hvordan den skal
+									bestemme fargen til hver piksel fra CPUen, og kan gjøre det
+									med lynfart.
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section id="why">
+					<div class="container">
+						<div class="about-header">
+							<h2>Hvorfor ikke bare bruke CPUen?</h2>
+						</div>
+						<div class="about-content">
+							<div class="about-text">
+								<p>
+									De aller første datamaskinene brukte CPUen til å tegne til
+									skjermen, men ettersom at skjermene ble større og innholdet
+									mer komplisert, viste det seg at man trengte en dedikert
+									komponent til oppgaven. GPUen er spesialisert til å tegne til
+									skjermen siden den består av mange små prosessorer som kan
+									kjøre samtidig. Dette lar GPUen skrive til flere piksler
+									samtidig, som gjør den mye mer effektiv. I tillegg kan også
+									CPUen fortsette å jobbe imens GPUen tegner, som gjør hele
+									datamaskinen mye raskere.
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section id="overview">
+					<div class="container">
+						<div class="about-header">
+							<h2>Komponentene til GPUen</h2>
+						</div>
+						<div class="about-content">
+							<div class="about-text">
+								<p>
+									GPUen har 4 hovedkomponenter som den bruker for å fullføre
+									oppgaven sin så fort som overhodet mulig:
+								</p>
+								<ul>
+									<li>VRAM</li>
+									<li>GCA</li>
+									<li>VPU</li>
+									<li>DIF</li>
+								</ul>
+							</div>
+							<div class="about-img-container">
+								<img
+									src="assets/images/gpu_internal.png"
+									alt="Diagram av innsiden til en GPU"
+									class="about-img"
+								/>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section id="vram">
+					<div class="container">
+						<div class="about-header">
+							<h3>VRAM</h3>
+						</div>
+						<div class="about-content">
+							<div class="about-text">
+								<p>
+									CPUen bruker RAM til å lagre data i kortidsminne, men GPUen
+									trenger også å gjøre det samme. Dessverre kan kun 1 komponent
+									få tilgang til RAM til enhver tid. Det vil si at hvis både
+									CPUen og GPUen skulle bruke samme RAM, ville mye tid bli
+									mistet ved at de venter på hverandre. Derfor har GPUen en egen
+									RAM. Denne heter VRAM, eller "Video RAM". VRAM blir kun brukt
+									av GPUen til vanlig, og CPUen når den trenger å kommunisere
+									med GPUen.
+								</p>
+								<p>
+									I VRAM lagres resursene som GPUen bruker, og resultatet av
+									arbeidet til GPUen. CPUen laster opp resurser til GPUen, og
+									GPUen bruker de til å lage bildet CPUen vil ha.
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
 
-        <section id="vpu">
-          <div class="container">
-            <div class="about-header">
-              <h3>VPU</h3>
-            </div>
-            <div class="about-content">
-              <div class="about-text">
-                <p>
-                  En VPU, eller en "Video Processing Unit", er delen av en GPU
-                  som koder bildet som GPUen har laget til et video- eller
-                  bildeformat som kan brukes av resten av datamaskinen.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+				<section id="vpu">
+					<div class="container">
+						<div class="about-header">
+							<h3>VPU</h3>
+						</div>
+						<div class="about-content">
+							<div class="about-text">
+								<p>
+									En VPU, eller en "Video Processing Unit", er delen av en GPU
+									som koder bildet som GPUen har laget til et video- eller
+									bildeformat som kan brukes av resten av datamaskinen.
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
 
-        <section id="dif">
-          <div class="container">
-            <div class="about-header">
-              <h3>DIF</h3>
-            </div>
-            <div class="about-content">
-              <div class="about-text">
-                <p>
-                  En DIF, også kalt en "Display Interface", er den delen av
-                  GPUen du kobler opp til skjermen din. Den tar de ferdige
-                  bildene fra VPUen og sender dem til alle skjermene koblet til
-                  den.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+				<section id="dif">
+					<div class="container">
+						<div class="about-header">
+							<h3>DIF</h3>
+						</div>
+						<div class="about-content">
+							<div class="about-text">
+								<p>
+									En DIF, også kalt en "Display Interface", er den delen av
+									GPUen du kobler opp til skjermen din. Den tar de ferdige
+									bildene fra VPUen og sender dem til alle skjermene koblet til
+									den.
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
 
-        <section id="gca">
-          <div class="container">
-            <div class="about-header">
-              <h3>GCA</h3>
-            </div>
-            <div class="about-content">
-              <div class="about-text">
-                <p>
-                  GCA er en forkortelse for "Graphics and Compute Array", og det
-                  er hjernen til GPUen. Det er delen av GPUen som faktisk lager
-                  bildene du ser. Den tar instruksjonene fra CPUen som ligger i
-                  VRAM og lager et bilde, som den da laster tilbake opp i
-                  VRAMen.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+				<section id="gca">
+					<div class="container">
+						<div class="about-header">
+							<h3>GCA</h3>
+						</div>
+						<div class="about-content">
+							<div class="about-text">
+								<p>
+									GCA er en forkortelse for "Graphics and Compute Array", og det
+									er hjernen til GPUen. Det er delen av GPUen som faktisk lager
+									bildene du ser. Den tar instruksjonene fra CPUen som ligger i
+									VRAM og lager et bilde, som den da laster tilbake opp i
+									VRAMen.
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
 
-        <section id="chip8-gpu">
-          <div class="container">
-            <div class="about-header">
-              <h2>GPUen til Chip 8</h2>
-            </div>
-            <div class="about-content">
-              <div class="about-text">
-                <p>
-                  GPUen til en Chip 8 er svert ukomplisert, som resten av
-                  datamaskinen. Chip 8 er designet for en monokrom 64x32 skjerm.
-                  Det vil si at hver piksel kan kun være enten på eller av. I
-                  tillegg er det CPUen som bestemmer hvilke piksler som er av og
-                  hvilke som er på. På grunn av disse to faktorene, betyr det at
-                  chipen kun trenger nok VRAM til pikslene. 64 ganger 32
-                  piksler, som alle kun trenger en byte med data, resulterer i
-                  2048 bytes VRAM. Siden alle pikslene settes av CPUen, er alt
-                  GPUen må gjøre å oppdatere skjermen.
-                </p>
-                <p>
-                  Det er også verdt å merke seg at VRAMen kan komprimeres ned
-                  til kun 256 bytes. Dette er fordi at siden pikslene til
-                  skjermen kun kan være av eller på, trenger man kun en bit for
-                  hver piksel. En byte har 8 bits, som betyr at i hver byte kan
-                  man lagre 8 piksler. Med denne optimaliseringen kan hver
-                  bredde av skjermen, på 64 piksler, representeres av 8 bytes. 8
-                  bytes per bredde, og 32 i høyde er 256 bytes.
-                </p>
-              </div>
-              <div class="about-img-container">
-                <img
-                  src="../assets/images/space_invaders_big.png"
-                  alt="Bilde av Space Invaders på en emulator av en Chip 8"
-                  class="about-img"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
+				<section id="chip8-gpu">
+					<div class="container">
+						<div class="about-header">
+							<h2>GPUen til Chip 8</h2>
+						</div>
+						<div class="about-content">
+							<div class="about-text">
+								<p>
+									GPUen til en Chip 8 er svert ukomplisert, som resten av
+									datamaskinen. Chip 8 er designet for en monokrom 64x32 skjerm.
+									Det vil si at hver piksel kan kun være enten på eller av. I
+									tillegg er det CPUen som bestemmer hvilke piksler som er av og
+									hvilke som er på. På grunn av disse to faktorene, betyr det at
+									chipen kun trenger nok VRAM til pikslene. 64 ganger 32
+									piksler, som alle kun trenger en byte med data, resulterer i
+									2048 bytes VRAM. Siden alle pikslene settes av CPUen, er alt
+									GPUen må gjøre å oppdatere skjermen.
+								</p>
+								<p>
+									Det er også verdt å merke seg at VRAMen kan komprimeres ned
+									til kun 256 bytes. Dette er fordi at siden pikslene til
+									skjermen kun kan være av eller på, trenger man kun en bit for
+									hver piksel. En byte har 8 bits, som betyr at i hver byte kan
+									man lagre 8 piksler. Med denne optimaliseringen kan hver
+									bredde av skjermen, på 64 piksler, representeres av 8 bytes. 8
+									bytes per bredde, og 32 i høyde er 256 bytes.
+								</p>
+							</div>
+							<div class="about-img-container">
+								<img
+									src="../assets/images/space_invaders_big.png"
+									alt="Bilde av Space Invaders på en emulator av en Chip 8"
+									class="about-img"
+								/>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
 
-      <section class="components">
-        <div class="container">
-          <div class="components-header">
-            <h1>Lær også om</h1>
-          </div>
-          <div class="component-cards centered columns">
-            <div class="component cpu">
-              <a href="../cpu" class="component-card">
-                <img
-                  src="https://img.icons8.com/sf-regular-filled/96/FF9800/electronics.png"
-                  class="component-card-img"
-                />
-                Prosessoren
-              </a>
-            </div>
-            <div class="component memory">
-              <a href="../memory" class="component-card">
-                <img
-                  src="https://img.icons8.com/sf-regular-filled/96/7CB342/memory-slot.png"
-                  class="component-card-img"
-                />
-                Minnet
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-  </body>
+			<section class="components">
+				<div class="container">
+					<div class="components-header">
+						<h1>Lær også om</h1>
+					</div>
+					<div class="component-cards centered columns">
+						<div class="component cpu">
+							<a href="../cpu" class="component-card">
+								<img
+									src="https://img.icons8.com/sf-regular-filled/96/FF9800/electronics.png"
+									class="component-card-img"
+								/>
+								Prosessoren
+							</a>
+						</div>
+						<div class="component memory">
+							<a href="../memory" class="component-card">
+								<img
+									src="https://img.icons8.com/sf-regular-filled/96/7CB342/memory-slot.png"
+									class="component-card-img"
+								/>
+								Minnet
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</body>
 </html>

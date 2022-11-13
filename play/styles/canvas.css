@@ -1,40 +1,40 @@
 #emulator {
-  margin: 1rem;
+	margin: 1rem;
 }
 
 #wasm-chip8-canvas {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
-  aspect-ratio: 2 / 1;
+	aspect-ratio: 2 / 1;
 
-  background: linear-gradient(
-    45deg,
-    #42a5f5 25%,
-    #ff9800 25%,
-    #ff9800 50%,
-    #ef5350 50%,
-    #ef5350 75%,
-    #7cb342 75%
-  );
+	background: linear-gradient(
+		45deg,
+		#42a5f5 25%,
+		#ff9800 25%,
+		#ff9800 50%,
+		#ef5350 50%,
+		#ef5350 75%,
+		#7cb342 75%
+	);
 }
 
 #emulatorStarter {
-  font-size: 2rem;
-  font-weight: 200;
-  padding: 0.5rem 1rem;
+	font-size: 2rem;
+	font-weight: 200;
+	padding: 0.5rem 1rem;
 
-  border: none;
-  background: #ffffffee;
+	border: none;
+	background: #ffffffee;
 
-  transition: 200ms;
+	transition: 200ms;
 }
 
 #emulatorStarter:hover {
-  background-color: #ffffffcc;
+	background-color: #ffffffcc;
 }
 
 #emulatorStarter:active {
-  background-color: #ffffffff;
+	background-color: #ffffffff;
 }
