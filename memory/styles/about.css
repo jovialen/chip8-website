@@ -33,6 +33,10 @@
     margin: 0.25rem 0;
 }
 
+#how .about-content {
+    flex-direction: row-reverse;
+}
+
 #unique .about-img {
     height: 12rem;
     width: auto;
