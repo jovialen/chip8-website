@@ -104,26 +104,7 @@
         <div id="wasm-chip8-canvas" class="centered">
           <button id="emulatorStarter">Start</button>
         </div>
-        <script type="module">
-          import init from "./assets/wasm/emulator/chip8_emu.js";
-
-          document
-            .getElementById("emulatorStarter")
-            .addEventListener("click", startEmulator);
-
-          function startEmulator() {
-            document.getElementById("emulatorStarter").classList.add("hide");
-
-            init().then(() => {
-              console.log("Loaded WASM");
-
-              let parent = document.getElementById("wasm-chip8-canvas");
-              parent.lastElementChild.style.width = "100%";
-              parent.lastElementChild.style.height = "100%";
-              parent.lastElementChild.focus();
-            });
-          }
-        </script>
+        <script src="javascript/initEmulator.js" type="module"></script>
       </div>
     </section>
   </body>
