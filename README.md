@@ -1,3 +1,13 @@
+# [jovialen.github.io](https://jovialen.github.io)
+
+<p align="center">
+  <img width="600"
+       alt="Image of the website"
+       src="./assets/images/website_example.png">
+</p>
+
+A simple website made for a school project explaining the inner workings of a computer with the Chip8 as an example.
+
 ## Resources
 
 - https://www.diagrams.net/
