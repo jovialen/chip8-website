@@ -2,22 +2,30 @@
 	margin: 1rem;
 }
 
+canvas:focus {
+	outline: none;
+}
+
 #wasm-chip8-canvas {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	box-sizing: content-box;
 
 	aspect-ratio: 2 / 1;
 
-	background: linear-gradient(
-		45deg,
-		#42a5f5 25%,
-		#ff9800 25%,
-		#ff9800 50%,
-		#ef5350 50%,
-		#ef5350 75%,
-		#7cb342 75%
-	);
+	background-color: black;
+	border: 2px solid;
+	border-image: linear-gradient(
+			45deg,
+			#42a5f5 25%,
+			#ff9800 25%,
+			#ff9800 50%,
+			#ef5350 50%,
+			#ef5350 75%,
+			#7cb342 75%
+		)
+		2;
 }
 
 #emulatorStarter {
@@ -25,8 +33,8 @@
 	font-weight: 200;
 	padding: 0.5rem 1rem;
 
+	background: whitesmoke;
 	border: none;
-	background: #ffffffee;
 
 	transition: 200ms;
 }
