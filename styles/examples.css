@@ -21,7 +21,6 @@
 	display: flex;
 	flex-direction: column;
 
-	background-color: white;
 	flex-grow: 1;
 }
 
@@ -48,6 +47,7 @@
 	padding: 1rem;
 
 	z-index: 1;
+	background-color: whitesmoke;
 	border: 2px solid;
 	border-top: none;
 	border-image: linear-gradient(
