@@ -1,4 +1,4 @@
-# [jovialen.github.io](https://jovialen.github.io)
+# [Chip8 Website](https://jovialen.github.io/chip8-website)
 
 <p align="center">
   <img width="600"
